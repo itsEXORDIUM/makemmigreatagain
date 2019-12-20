@@ -6,7 +6,7 @@
         mmi_site
       </h1>
       <h2 class="subtitle">
-        mmi dans ta gueule
+        mmi saucisse
       </h2>
       <div class="links">
         <a
