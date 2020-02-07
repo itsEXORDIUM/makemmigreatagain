@@ -1,11 +1,10 @@
 <template>
-  <h1>Hi !</h1>
+  <h1>Formation</h1>
 </template>
 
 <script>
 export default {
+  components: {
+  }
 }
 </script>
-
-<style>
-</style>
