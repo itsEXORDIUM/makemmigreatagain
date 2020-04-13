@@ -1,3 +1,7 @@
+body {
+    font-size:62.5%;
+}
+
 // VARIABLES
 @import 'variables/colors';
 @import 'variables/fonts';
@@ -8,10 +12,12 @@
 // TEXTES
 @import 'textes/liens.scss';
 
+// BLOCKS
+@import 'header/uiNav.scss';
+
 // INIT
 /** INIT **/
 body {
-    font-size:62.5%;
     font-family:'muli_semibold', Arial, Helvetica, sans-serif;
     color:$blue;
     background-color:$darkgrey;
