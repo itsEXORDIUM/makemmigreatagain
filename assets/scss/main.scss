@@ -1,24 +1,37 @@
+:root {
+    font-size:10px;
+}
+
 body {
-    font-size:62.5%;
+    // font-size:62.5%;
 }
 
 // VARIABLES
 @import 'variables/colors';
 @import 'variables/fonts';
+@import 'variables/general';
 
 // NORMALIZE
 @import 'normalize/normalize.scss';
 
-// TEXTES
-@import 'textes/liens.scss';
-
-// BLOCKS
-@import 'header/uiNav.scss';
-
 // INIT
-/** INIT **/
 body {
     font-family:'muli_semibold', Arial, Helvetica, sans-serif;
     color:$blue;
     background-color:$darkgrey;
 }
+
+img {
+    max-width:100%;
+}
+
+// TEXTES
+@import 'textes/liens.scss';
+@import 'textes/titres.scss';
+
+// BLOCKS
+@import 'header/uiHeader.scss';
+@import 'header/uiNav.scss';
+
+// PAGES
+@import 'pages/accueil.scss';

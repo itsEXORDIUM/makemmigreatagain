@@ -1,0 +1,23 @@
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 1.438rem 0;
+    
+    > div {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+
+        #logo {
+            display: block;
+            width:8rem;
+            height:8rem;
+            text-indent:-9999em;
+            background:url('../../static/logos/logo_mmi.png') no-repeat center center;
+            background-size:contain;
+        }
+    }
+}

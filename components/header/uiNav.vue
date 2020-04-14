@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <span id="menuhandle">Ouvre le menu</span>
+    <button id="menuhandle">Ouvre le menu</button>
     <ul id="mainMenu">
         <li><nuxt-link to="/">Accueil</nuxt-link></li>
         <li><nuxt-link to="/formation">Formation</nuxt-link></li>

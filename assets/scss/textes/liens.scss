@@ -1,3 +1,19 @@
-a {
+a.action {
     color:$blue;
+    display: block;
+    font-family: 'muli_semibold', Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
+    line-height: 1.2em;
+    width:12.5rem;
+    height:10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+
+    &.big {
+        width:15.5rem;
+        height:15rem;
+    }
 }
