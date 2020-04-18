@@ -1,6 +1,5 @@
 a.action {
     color:$blue;
-    display: block;
     font-family: 'muli_semibold', Arial, Helvetica, sans-serif;
     font-size: 1.8em;
     line-height: 1.2em;
@@ -11,6 +10,12 @@ a.action {
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    background:url('../../static/svgs/gribouille.svg') no-repeat center center;
+    background-size: contain;
+
+    &.dark {
+        background-image:url('../../static/svgs/gribouille_dark.svg')
+    }
 
     &.big {
         width:15.5rem;

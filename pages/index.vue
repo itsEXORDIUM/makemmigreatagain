@@ -1,12 +1,12 @@
 <template>
   <div id="accueil">
     <Accueil :headPage="headPage"/>
-    <BlocHome :titre="titrepolyvalents" :texte="textepolyvalents" :lien="lienpolyvalents" :images="imagespolyvalents"/>
-    <BlocHome :titre="titrealtini" :texte="textealtini" :lien="lienaltini" :images="imagesaltini"/>
-    <BlocHome :titre="titredepartement" :texte="textedepartement" :lien="liendepartement" :images="imagesdepartement"/>
-    <BlocHome :titre="titrecontact" :texte="textecontact" :lien="liencontact" :image="imagecontact"/>
+    <BlocHome :name="namepolyvalents" :titre="titrepolyvalents" :texte="textepolyvalents" :lien="lienpolyvalents" :images="imagespolyvalents"/>
+    <BlocHome :name="namealtini" :titre="titrealtini" :texte="textealtini" :lien="lienaltini" :images="imagesaltini"/>
+    <BlocHome :name="namedepartement" :titre="titredepartement" :texte="textedepartement" :lien="liendepartement" :images="imagesdepartement"/>
+    <BlocHome :name="namecontact" :titre="titrecontact" :texte="textecontact" :lien="liencontact" :image="imagecontact"/>
     <EcoutezEtudiants :titre="titrenosetudiants"/>
-    <BlocHome :titre="titrerejoindre" :image="imagerejoindre"/>
+    <BlocHome :name="namerejoindre" :titre="titrerejoindre" :image="imagerejoindre"/>
   </div>
 </template>
 
@@ -24,14 +24,17 @@ export default {
     return {
       homeData: [],
       headPage: '',
+      namepolyvalents : 'polyvalents',
       titrepolyvalents : '',
       textepolyvalents : '',
       lienpolyvalents : '',
       imagespolyvalents: [],
+      namealtini : 'altini',
       titrealtini: '',
       textealtini: '',
       lienaltini: '',
       imagesaltini: [],
+      namedepartement: 'departement',
       titredepartement: '',
       textedepartement: '',
       liendepartement: '',
@@ -40,10 +43,12 @@ export default {
       textepays: '',
       lienvoirdupays: '',
       imagepays: [],
+      namecontact : 'contact',
       titrecontact: '',
       textecontact: '',
       liencontact: '',
       imagecontact: [],
+      namerejoindre: 'rejoindre',
       titrenosetudiants: '',
       titrerejoindre: '',
       imagerejoindre: ''

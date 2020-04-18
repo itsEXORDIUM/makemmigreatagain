@@ -1,0 +1,19 @@
+.bloc_home {
+    .bloc_titre {
+        margin: 0;
+    }
+
+    p {
+        font-family: 'muli_semibold', Arial, Helvetica, sans-serif;
+        font-size: 1.8em;
+        line-height: 1.2em;
+    }
+
+    &.polyvalents {
+        .bloc_titre {
+            svg {
+                width:40%;
+            }
+        }
+    }
+}
