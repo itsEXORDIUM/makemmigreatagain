@@ -2,7 +2,7 @@
   <div id="accueil">
     <Accueil :headPage="headPage"/>
     <BlocHome :name="namepolyvalents" :titre="titrepolyvalents" :texte="textepolyvalents" :lien="lienpolyvalents" :images="imagespolyvalents"/>
-    <BlocHome :name="namealtini" :titre="titrealtini" :texte="textealtini" :lien="lienaltini" :images="imagesaltini"/>
+    <BlocHomeV2 :name="namealtini" :titre="titrealtini" :soustitre="soustitrealtini" :texte="textealtini" :lien="lienaltini" :images="imagesaltini"/>
     <BlocHome :name="namedepartement" :titre="titredepartement" :texte="textedepartement" :lien="liendepartement" :images="imagesdepartement"/>
     <BlocHome :name="namecontact" :titre="titrecontact" :texte="textecontact" :lien="liencontact" :image="imagecontact"/>
     <EcoutezEtudiants :titre="titrenosetudiants"/>
@@ -14,11 +14,12 @@
 import axios from 'axios'
 import Accueil from '~/components/head_pages/accueil'
 import BlocHome from '~/components/blocs/blocHome'
+import BlocHomeV2 from '~/components/blocs/blocHomeV2'
 import EcoutezEtudiants from '~/components/blocs/ecoutezEtudiants'
 
 export default {
   components: {
-    Accueil, BlocHome, EcoutezEtudiants
+    Accueil, BlocHome, BlocHomeV2, EcoutezEtudiants
   },
   data() {
     return {
@@ -32,6 +33,7 @@ export default {
       namealtini : 'altini',
       titrealtini: '',
       textealtini: '',
+      soustitrealtini: '',
       lienaltini: '',
       imagesaltini: [],
       namedepartement: 'departement',
@@ -70,6 +72,7 @@ export default {
           // Alternance ou initial
           this.titrealtini = response.data.acf.titre_alt_init;
           this.textealtini = response.data.acf.texte_alt_ini;
+          this.soustitrealtini = response.data.acf.sous_titre_alt_init;
           this.lienaltini = response.data.acf.lien_alt_init;
           this.imagesaltini = response.data.acf.images_alt_init;
 
