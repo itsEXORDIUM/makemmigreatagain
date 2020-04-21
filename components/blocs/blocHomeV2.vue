@@ -1,11 +1,14 @@
 <template>
-  <div :class="`bloc_home wrap ${name}`">
+  <div :class="`bloc_home v2 wrap ${name}`">
     <div class="ligne">
       <div>
         <h2 class="bloc_titre">
           <span class="show-for-sr">{{titre}}</span>
           <span v-if="bloc == 'altini'">
             <Alternanceini/>
+          </span>
+          <span v-if="bloc == 'departement'">
+            <NotreDepartement/>
           </span>
         </h2>
       </div>
@@ -15,7 +18,10 @@
     </div>
     <div class="ligne">
       <div>
-        <h3 class="subtitle">{{soustitre}}</h3>
+        <h3 v-if="soustitre" class="subtitle">{{soustitre}}</h3>
+        <span v-if="bloc == 'departement'">
+            <LeMeilleur/>
+          </span>
         <p v-if="texte">{{texte}}</p>
         <nuxt-link v-if="lien" :to="lien" class="action big">En savoir plus</nuxt-link>
       </div>
@@ -28,6 +34,8 @@
 
 <script>
 import Alternanceini from '~/components/titres/alternanceouini'
+import NotreDepartement from '~/components/titres/notredepartement'
+import LeMeilleur from '~/components/titres/lemeilleur'
 
 export default {
   props: {
@@ -40,7 +48,7 @@ export default {
       image: ''
   },
   components: {
-    Alternanceini
+    Alternanceini, NotreDepartement, LeMeilleur
   },
   data() {
     return {
@@ -54,6 +62,8 @@ export default {
     checkBloc: function() {
       if(this.name == 'altini') {
         this.bloc = 'altini';
+      } else if (this.name == 'departement') {
+        this.bloc = 'departement';
       }
     }
   }

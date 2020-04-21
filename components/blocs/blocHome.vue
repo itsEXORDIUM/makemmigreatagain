@@ -6,6 +6,9 @@
         <span v-if="bloc == 'polyvalents'">
           <Polyvalents/>
         </span>
+        <span v-if="bloc == 'pays'">
+          <VoirPays/>
+        </span>
       </h2>
       <p v-if="texte">{{texte}}</p>
       <nuxt-link v-if="lien" :to="lien" class="action big">En savoir plus</nuxt-link>
@@ -19,6 +22,7 @@
 
 <script>
 import Polyvalents from '~/components/titres/polyvalents'
+import VoirPays from '~/components/titres/voirpays'
 
 export default {
   props: {
@@ -30,7 +34,7 @@ export default {
       image: ''
   },
   components: {
-    Polyvalents
+    Polyvalents, VoirPays
   },
   data() {
     return {
@@ -44,6 +48,8 @@ export default {
     checkBloc: function() {
       if(this.name == 'polyvalents') {
         this.bloc = 'polyvalents';
+      } else if (this.name =='pays') {
+        this.bloc = 'pays';
       }
     }
   }

@@ -3,7 +3,8 @@
     <Accueil :headPage="headPage"/>
     <BlocHome :name="namepolyvalents" :titre="titrepolyvalents" :texte="textepolyvalents" :lien="lienpolyvalents" :images="imagespolyvalents"/>
     <BlocHomeV2 :name="namealtini" :titre="titrealtini" :soustitre="soustitrealtini" :texte="textealtini" :lien="lienaltini" :images="imagesaltini"/>
-    <BlocHome :name="namedepartement" :titre="titredepartement" :texte="textedepartement" :lien="liendepartement" :images="imagesdepartement"/>
+    <BlocHomeV2 :name="namedepartement" :titre="titredepartement" :texte="textedepartement" :lien="liendepartement" :images="imagesdepartement"/>
+    <BlocHome :name="namepays" :titre="titrepays" :texte="textepays" :image="imagepays"/>
     <BlocHome :name="namecontact" :titre="titrecontact" :texte="textecontact" :lien="liencontact" :image="imagecontact"/>
     <EcoutezEtudiants :titre="titrenosetudiants"/>
     <BlocHome :name="namerejoindre" :titre="titrerejoindre" :image="imagerejoindre"/>
@@ -41,6 +42,7 @@ export default {
       textedepartement: '',
       liendepartement: '',
       imagesdepartement: [],
+      namepays: 'pays',
       titrepays: '',
       textepays: '',
       lienvoirdupays: '',
