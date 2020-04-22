@@ -1,6 +1,11 @@
 <template>
   <span>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000"><defs><style>.cls-1,.cls-2,.cls-3,.cls-5{isolation:isolate;}.cls-2{font-size:177.28px;}.cls-2,.cls-3{fill:#d0e8e2;}.cls-2,.cls-3,.cls-5{font-family:Morganite-Bold, Morganite;font-weight:700;}.cls-3,.cls-5{font-size:531.84px;}.cls-4{letter-spacing:-0.02em;}.cls-5{fill:none;stroke:#d0e8e2;stroke-width:3px;}</style></defs><g id="NOTRE_DÉPARTEMENT" data-name="NOTRE DÉPARTEMENT" class="cls-1"><text class="cls-2" transform="translate(361.63 748.2)">NOTRE</text><text class="cls-3" transform="translate(361.63 1235.72)">DÉ<tspan class="cls-4" x="229.75" y="0"> P</tspan><tspan x="345.16" y="0"> ARTEMENT</tspan></text></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000"><defs><style>.notre{font-size:177.28px;}.notre,.svgdepartement{fill:#d0e8e2;}.notre,.svgdepartement{font-family:Morganite-Bold, Morganite;font-weight:700;}.svgdepartement{font-size:531.84px;}</style></defs>
+      <g id="NOTRE_DÉPARTEMENT" data-name="NOTRE DÉPARTEMENT" class="cls-1">
+        <text class="notre" transform="translate(361.63 748.2)">NOTRE</text>
+        <text class="svgdepartement" transform="translate(361.63 1235.72)">DÉPARTEMENT</tspan></text>
+      </g>
+    </svg>
   </span>
 </template>
 

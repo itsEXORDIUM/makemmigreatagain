@@ -9,9 +9,16 @@
         <span v-if="bloc == 'pays'">
           <VoirPays/>
         </span>
+        <span v-if="bloc == 'contact'">
+          <OnsAppelle/>
+        </span>
+        <span v-if="bloc == 'rejoindre'">
+          <Rejoindre/>
+        </span>
       </h2>
-      <p v-if="texte">{{texte}}</p>
+      <p v-if="texte" v-html="texte"></p>
       <nuxt-link v-if="lien" :to="lien" class="action big">En savoir plus</nuxt-link>
+      <nuxt-link v-if="bloc == 'rejoindre'" to="/" class="action big">Postuler</nuxt-link>
     </div>
     <div>
       <img v-for="(img, index) in images" :key="index" :src="img" alt=""/>
@@ -23,6 +30,8 @@
 <script>
 import Polyvalents from '~/components/titres/polyvalents'
 import VoirPays from '~/components/titres/voirpays'
+import OnsAppelle from '~/components/titres/onsappelle'
+import Rejoindre from '~/components/titres/rejoindre'
 
 export default {
   props: {
@@ -34,7 +43,7 @@ export default {
       image: ''
   },
   components: {
-    Polyvalents, VoirPays
+    Polyvalents, VoirPays, OnsAppelle, Rejoindre
   },
   data() {
     return {
@@ -50,6 +59,10 @@ export default {
         this.bloc = 'polyvalents';
       } else if (this.name =='pays') {
         this.bloc = 'pays';
+      } else if (this.name =='contact') {
+        this.bloc = 'contact';
+      } else if (this.name =='rejoindre') {
+        this.bloc = 'rejoindre';
       }
     }
   }

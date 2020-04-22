@@ -4,7 +4,7 @@
     <BlocHome :name="namepolyvalents" :titre="titrepolyvalents" :texte="textepolyvalents" :lien="lienpolyvalents" :images="imagespolyvalents"/>
     <BlocHomeV2 :name="namealtini" :titre="titrealtini" :soustitre="soustitrealtini" :texte="textealtini" :lien="lienaltini" :images="imagesaltini"/>
     <BlocHomeV2 :name="namedepartement" :titre="titredepartement" :texte="textedepartement" :lien="liendepartement" :images="imagesdepartement"/>
-    <BlocHome :name="namepays" :titre="titrepays" :texte="textepays" :image="imagepays"/>
+    <BlocHome :name="namepays" :titre="titrepays" :texte="textepays" :lien="lienpays" :image="imagepays"/>
     <BlocHome :name="namecontact" :titre="titrecontact" :texte="textecontact" :lien="liencontact" :image="imagecontact"/>
     <EcoutezEtudiants :titre="titrenosetudiants"/>
     <BlocHome :name="namerejoindre" :titre="titrerejoindre" :image="imagerejoindre"/>
@@ -45,15 +45,15 @@ export default {
       namepays: 'pays',
       titrepays: '',
       textepays: '',
-      lienvoirdupays: '',
+      lienpays: '',
       imagepays: [],
       namecontact : 'contact',
       titrecontact: '',
       textecontact: '',
       liencontact: '',
       imagecontact: [],
-      namerejoindre: 'rejoindre',
       titrenosetudiants: '',
+      namerejoindre: 'rejoindre',
       titrerejoindre: '',
       imagerejoindre: ''
     }
@@ -87,7 +87,7 @@ export default {
           // Voir du pays
           this.titrepays = response.data.acf.titre_pays;
           this.textepays = response.data.acf.texte_pays;
-          this.lienvoirdupays = response.data.acf.lien_voir_du_pays;
+          this.lienpays = response.data.acf.lien_voir_du_pays;
           this.imagepays = response.data.acf.image_pays;
 
           // On s'apelle - Contact

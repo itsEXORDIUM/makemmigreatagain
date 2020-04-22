@@ -19,6 +19,7 @@ body {
     font-family:'muli_semibold', Arial, Helvetica, sans-serif;
     color:$blue;
     background-color:$darkgrey;
+    overflow-x:hidden;
 }
 
 img, svg {
@@ -31,6 +32,7 @@ img, svg {
 
 // BLOCKS
 @import 'header/uiHeader.scss';
+@import 'footer/uiFooter.scss';
 @import 'header/uiNav.scss';
 @import 'blocs/bloc_home.scss';
 
