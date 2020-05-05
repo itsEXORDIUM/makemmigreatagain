@@ -4,6 +4,12 @@
     src: url('../fonts/Morganite-Bold.ttf') format('truetype');
   }
 
+// MULI REGULAR
+@font-face {
+  font-family: 'muli_regular';
+  src: url('../fonts/Muli-Regular.ttf') format('truetype');
+}
+
 // MULI SEMI BOLD
 @font-face {
     font-family: 'muli_semibold';
@@ -15,3 +21,9 @@
     font-family: 'muli_bold';
     src: url('../fonts/Muli-Bold.ttf') format('truetype');
   }
+
+// MULI EXTRA BOLD
+@font-face {
+  font-family: 'muli_extrabold';
+  src: url('../fonts/Muli-ExtraBold.ttf') format('truetype');
+}

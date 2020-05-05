@@ -1,3 +1,135 @@
 footer {
     margin-top:48rem;
+    padding-bottom:15.5rem;
+
+    #logoFooter {
+        display: flex;
+        justify-content: center;
+        margin-bottom:9rem;
+
+        a {
+            display: block;
+            width:9.6rem;
+            height:9.6rem;
+            background:url('../../static/logos/logo_mmi.png') no-repeat center center;
+            background-size:contain;
+            text-indent: -9999em;
+            position:relative;
+
+            &::before {
+                content:'';
+                display: block;
+                width:50vw;
+                height:0.3rem;
+                background-color:$blue;
+                position:absolute;
+                left:-5rem;
+                top:50%;
+                transform:translateX(-100%);
+            }
+
+            &::after {
+                content:'';
+                display: block;
+                width:50vw;
+                height:0.3rem;
+                background-color:$blue;
+                position:absolute;
+                left:calc(100% + 5rem);
+                top:50%;
+            }
+        }
+    }
+
+    #links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 11.6rem;
+
+        li {
+
+            &:not(:last-of-type) {
+                margin-right:1.2rem;
+            }
+
+            a {
+                display: block;
+                text-indent:-9999em;
+                height:5.4rem;
+
+                &.reseaux {
+                    width:5.4rem;
+
+                    &.linkedin {
+                        background:url('../../static/logos/linked.png') no-repeat center center;
+                        background-size:contain;
+                    }
+
+                    &.facebook {
+                        background:url('../../static/logos/fb.png') no-repeat center center;
+                        background-size:contain;
+                    }
+
+                    &.insta {
+                        background:url('../../static/logos/inst.png') no-repeat center center;
+                        background-size:contain;
+                    }
+
+                    &.twitter {
+                        background:url('../../static/logos/tw.png') no-repeat center center;
+                        background-size:contain;
+                    }
+                }
+
+                &.iut {
+                    width:12.5rem;
+                    background:url('../../static/logos/iut.png') no-repeat center center;
+                    background-size:contain;
+                }
+
+                &.universitefc {
+                    width:14.5rem;
+                    background:url('../../static/logos/iut.png') no-repeat center center;
+                    background-size:contain;
+                }
+            }
+        }
+    }
+
+    #contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+
+        p {
+            margin: 0;
+
+            a {
+                font-size: 1.5em;
+                line-height: 1.2em;
+                font-family: 'muli_regular', Arial, Helvetica, sans-serif;
+                color:$blue;
+            }
+        }
+
+        .intitule {
+            text-transform: uppercase;
+            font-size: 2em;
+            line-height: 1.2em;
+            font-family: 'muli_extrabold', Arial, Helvetica, sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .adresse {
+            font-size: 1.8em;
+            line-height: 1.2em;
+            margin-bottom:1rem;
+
+            a {
+                font-size: 1em;
+            }
+        }
+    }
 }

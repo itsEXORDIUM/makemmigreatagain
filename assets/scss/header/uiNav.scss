@@ -1,5 +1,6 @@
 #menuhandle {
     position:absolute;
+    z-index:9999;
     top:50%;
     right:0;
     transform:translateX(-50%);
@@ -33,5 +34,94 @@
 }
 
 #mainMenu {
-    display:none;
+    position:fixed;
+    z-index:9998;
+    top:0;
+    left:0;
+    width:0;
+    height:100vh;
+    padding:0;
+    margin: 0;
+    background-color:$darkgrey;
+    transition: all .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+    overflow:hidden;
+
+    &.open {
+        width:100%;
+    }
+
+    > div {
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        height:100%;
+
+        .pages {
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: flex-end;
+            padding-right:30rem;
+
+            a {
+                font-family: 'morganite_bold', arial, helvetica, sans-serif;
+                font-size: 12em;
+                line-height: 1.2em;
+                text-transform: uppercase;
+                -webkit-text-stroke: 3px $yellow;
+                letter-spacing: 0.05em;
+                background-image: linear-gradient(135deg, $yellow 0%, $yellow 50%, transparent 50.1%);
+                background-size: 0% 100%;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-repeat: no-repeat;
+                transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+
+                &:hover, &.nuxt-link-exact-active {
+                    background-size: 220% 120%;
+                }
+            }
+        }
+
+        .reseaux {
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            transform:translateX(-100%);
+
+            li {
+                &:not(:first-of-type) {
+                    margin-top:1rem;
+                }
+
+                a {
+                    display: block;
+                    width:5.4rem;
+                    height:5.4rem;
+                    text-indent: -9999em;
+    
+                    &.facebook {
+                        background:url('../../static/logos/fb.svg') no-repeat center center;
+                        background-size:250%;
+                    }
+    
+                    &.linkedin {
+                        background:url('../../static/logos/linked.svg') no-repeat center center;
+                        background-size:250%;
+                    }
+    
+                    &.insta {
+                        background:url('../../static/logos/inst.svg') no-repeat center center;
+                        background-size:250%;
+                    }
+    
+                    &.twitter {
+                        background:url('../../static/logos/tw.svg') no-repeat center center;
+                        background-size:250%;
+                    }
+                }
+            }
+        }
+    }
 }
