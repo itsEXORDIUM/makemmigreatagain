@@ -9,6 +9,7 @@
     width:4.3rem;
     height:0.3rem;
     background-color:$green;
+    transition: backgroundColor .3s ease-in-out;
 
     &::before {
         content:'';
@@ -19,6 +20,7 @@
         position:absolute;
         left:0;
         top:-0.8rem;
+        transition:all .3s ease-in-out;
     }
 
     &::after {
@@ -30,6 +32,26 @@
         position:absolute;
         left:0;
         top:0.8rem;
+        transition:all .3s ease-in-out;
+    }
+
+    &.toCross {
+        background-color: transparent;
+
+        &::before {
+            width:4.3rem;
+            transform:rotate(45deg);
+            transform-origin: top left;
+            top: -2.1rem;
+            background-color: $yellow;
+        }
+
+        &::after {
+            width:4.3rem;
+            transform:rotate(-45deg);
+            transform-origin: bottom left;
+            background-color: $yellow;
+        }
     }
 }
 
@@ -100,6 +122,11 @@
                     width:5.4rem;
                     height:5.4rem;
                     text-indent: -9999em;
+                    opacity:0.8;
+
+                    &:hover {
+                        opacity:1;
+                    }
     
                     &.facebook {
                         background:url('../../static/logos/fb.svg') no-repeat center center;

@@ -13,10 +13,10 @@
         </ul>
 
         <ul class="reseaux">
-          <li><a class="linkedin" href="#" target="_blank" title="Suivre MMI Montbéliard sur LinkedIn (Nouvelle Fenêtre)">LinkedIn</a></li>
-          <li><a class="facebook" href="#" target="_blank" title="Suivre MMI Montbéliard sur Facebook (Nouvelle Fenêtre)">Facebook</a></li>
-          <li><a class="insta" href="#" target="_blank" title="Suivre MMI Montbéliard sur Instagram (Nouvelle Fenêtre)">Instagram</a></li>
-          <li><a class="twitter" href="#" target="_blank" title="Suivre MMI Montbéliard sur Twitter (Nouvelle Fenêtre)">Twitter</a></li>
+          <li><a class="linkedin" href="http://www.linkedin.com/company/src-media" target="_blank" title="Suivre MMI Montbéliard sur LinkedIn (Nouvelle Fenêtre)">LinkedIn</a></li>
+          <li><a class="facebook" href="http://www.facebook.com/mmimontbeliard" target="_blank" title="Suivre MMI Montbéliard sur Facebook (Nouvelle Fenêtre)">Facebook</a></li>
+          <li><a class="insta" href="http://instagram.com/mmi_montbeliard" target="_blank" title="Suivre MMI Montbéliard sur Instagram (Nouvelle Fenêtre)">Instagram</a></li>
+          <li><a class="twitter" href="http://twitter.com/MMImontbeliard" target="_blank" title="Suivre MMI Montbéliard sur Twitter (Nouvelle Fenêtre)">Twitter</a></li>
         </ul>
       </div>
     </div>
@@ -28,6 +28,7 @@ export default {
   methods: {
     openMenu: function() {
       document.getElementById('mainMenu').classList.toggle('open');
+      document.getElementById('menuhandle').classList.toggle('toCross');
     }
   }
 }
