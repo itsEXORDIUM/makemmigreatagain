@@ -1,0 +1,197 @@
+.temoignage {
+    margin-top: 7rem;
+    
+    .bloc_titre {
+        width:50%;
+
+        svg {
+            margin-left: -16.5rem;
+        }
+    }
+
+    .mySlides { 
+        margin-top: 10rem;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+
+        .contenu {
+            width:50%;
+
+            .title {
+                font-family: 'morganite_bold', Arial, Helvetica, sans-serif;
+                font-size: 8em;
+                line-height: 1em;
+                text-transform: uppercase;
+                color:$blue;
+                margin-top: 0;
+                margin-bottom: 2.4rem;
+            }
+
+            p {
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+
+            .reseaux {
+                display: flex;
+                    
+                a {
+                    display: block;
+                    text-indent:-9999em;
+                    width:4.2rem;
+                    height:4.2rem;
+
+                    &:not(last-of-type) {
+                        margin-right:1rem;
+                    }
+
+                    &.linkedin {
+                        background:url('../../static/logos/linked.png') no-repeat center center;
+                        background-size:contain;
+                    }
+
+                    &.facebook {
+                        background:url('../../static/logos/fb.png') no-repeat center center;
+                        background-size:contain;
+                    }
+
+                    &.instagram {
+                        background:url('../../static/logos/inst.png') no-repeat center center;
+                        background-size:contain;
+                    }
+
+                    &.twitter {
+                        background:url('../../static/logos/tw.png') no-repeat center center;
+                        background-size:contain;
+                    }
+                }
+            }
+
+            blockquote {
+                width:74rem;
+                margin-top: 4.5rem;
+                padding:0 12rem;
+                font-family: 'muli_bold', arial, helvetica, sans-serif;
+                margin-left: -12.2rem;
+                position:relative;
+
+                &::before {
+                    content:'«';
+                    font-family: 'muli_bold', arial, helvetica, sans-serif;
+                    color:$yellow;
+                    font-size: 20em;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    line-height: 0;
+                }
+
+                &::after {
+                    content:'»';
+                    font-family: 'muli_bold', arial, helvetica, sans-serif;
+                    color:$yellow;
+                    font-size: 20em;
+                    position: absolute;
+                    bottom:0;
+                    right:0;
+                    line-height: 0;
+                }
+            }
+        }
+
+        .identite {
+            width:50%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .nom_temoin {
+                font-family: 'morganite_bold', Arial, Helvetica, sans-serif;
+                font-size: 15em;
+                line-height: 1em;
+                text-transform: uppercase;
+                color:$yellow;
+                margin: 0;
+                margin-left: 1.5rem;
+                margin-bottom: -2rem;
+            }
+
+            img {
+                width:53.6rem;
+                height:53rem;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.mySlides {display: none}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+
+  .mySlides {
+    &:first-of-type {
+        display: flex;
+    }
+}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: $blue;
+  font-size: 5em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  transform:translateX(200%);
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    transform:translateX(-200%);
+  }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    color: $yellow;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
