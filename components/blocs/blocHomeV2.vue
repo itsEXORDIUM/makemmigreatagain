@@ -10,6 +10,9 @@
           <span v-if="bloc == 'departement'">
             <NotreDepartement/>
           </span>
+          <span v-if="bloc == 'design'">
+            <Design/>
+          </span>
         </h2>
       </div>
       <div>
@@ -22,7 +25,12 @@
         <span v-if="bloc == 'departement'">
             <LeMeilleur/>
           </span>
-        <p v-if="texte">{{texte}}</p>
+        <div v-if="bloc == 'design'">
+          <p v-for="(par, index) in texte" :key="index">
+            {{par}}
+          </p>
+        </div>
+        <p v-if="texte && bloc != 'design'">{{texte}}</p>
         <nuxt-link v-if="lien" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
       </div>
       <div>
@@ -36,6 +44,7 @@
 import Alternanceini from '~/components/titres/alternanceouini'
 import NotreDepartement from '~/components/titres/notredepartement'
 import LeMeilleur from '~/components/titres/lemeilleur'
+import Design from '~/components/titres/design'
 
 export default {
   props: {
@@ -48,7 +57,7 @@ export default {
       image: ''
   },
   components: {
-    Alternanceini, NotreDepartement, LeMeilleur
+    Alternanceini, NotreDepartement, LeMeilleur, Design
   },
   data() {
     return {
@@ -66,6 +75,8 @@ export default {
         this.bloc = 'altini';
       } else if (this.name == 'departement') {
         this.bloc = 'departement';
+      } else if (this.name == 'design') {
+        this.bloc = 'design';
       }
     },
     checkLien: function() {

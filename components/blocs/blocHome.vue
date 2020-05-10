@@ -15,10 +15,13 @@
         <span v-if="bloc == 'rejoindre'">
           <Rejoindre/>
         </span>
+        <span v-if="bloc == 'formation'">
+          <Formation/>
+        </span>
       </h2>
       <p v-if="texte" v-html="texte"></p>
       <nuxt-link v-if="lien" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
-      <a v-if="bloc == 'rejoindre'" href="https://www.parcoursup.fr/" class="action big" target="_blank" title="Postuler sur ParcourSup (Nouvelle Fenêtre)">Postuler</a>
+      <a v-if="bloc == 'rejoindre' || 'formation'" href="https://www.parcoursup.fr/" class="action big" target="_blank" title="Postuler sur ParcourSup (Nouvelle Fenêtre)">Postuler</a>
     </div>
     <div>
       <img v-for="(img, index) in images" :key="index" :src="img" alt=""/>
@@ -32,6 +35,7 @@ import Polyvalents from '~/components/titres/polyvalents'
 import VoirPays from '~/components/titres/voirpays'
 import OnsAppelle from '~/components/titres/onsappelle'
 import Rejoindre from '~/components/titres/rejoindre'
+import Formation from '~/components/titres/formation'
 
 export default {
   props: {
@@ -43,7 +47,7 @@ export default {
       image: ''
   },
   components: {
-    Polyvalents, VoirPays, OnsAppelle, Rejoindre
+    Polyvalents, VoirPays, OnsAppelle, Rejoindre, Formation
   },
   data() {
     return {
@@ -68,6 +72,8 @@ export default {
         this.bloc = 'contact';
       } else if (this.name =='rejoindre') {
         this.bloc = 'rejoindre';
+      } else if (this.name =='formation') {
+        this.bloc = 'formation';
       }
     },
     checkLien: function() {

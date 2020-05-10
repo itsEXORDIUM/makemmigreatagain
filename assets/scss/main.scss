@@ -34,8 +34,10 @@ img, svg {
 @import 'header/uiHeader.scss';
 @import 'footer/uiFooter.scss';
 @import 'header/uiNav.scss';
+@import 'blocs/head_page.scss';
 @import 'blocs/bloc_home.scss';
 @import 'blocs/ecoutezEtudiants.scss';
 
 // PAGES
 @import 'pages/accueil.scss';
+@import 'pages/formation.scss';

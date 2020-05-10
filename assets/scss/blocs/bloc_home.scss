@@ -285,4 +285,106 @@
             }
         }
     }
+
+    &.formation {
+        display:flex;
+        flex-wrap: wrap;
+        margin-top:30rem;
+        position: relative;
+        padding-bottom:80rem;
+
+        &::after {
+            content:'';
+            display: block;
+            position:absolute;
+            top:-8rem;
+            left:-5rem;
+            width:50%;
+            height:35%;
+            background: url('../../static/imgs/taches/truk2.png') no-repeat center center;
+            background-size:contain;
+            z-index:-1;
+        }
+
+        > div {
+            width:50%;
+        }
+
+        .bloc_titre {
+            
+            svg {
+                width: 120%;
+                max-width: 120%;
+                margin-bottom: -25rem;
+                margin-left: -23rem;
+                margin-top: -48rem;
+            }
+        }
+
+        p {
+            width:80%;
+        }
+    }
+
+    &.design {
+        padding-top:21.6rem;
+        position:relative;
+
+        .bloc_titre {
+            align-items: center;
+            position: relative;
+
+            svg {
+                position:absolute;
+                top: -21rem;
+                right: -26rem;
+                width: 120%;
+                max-width: 120%;
+            }
+        }
+
+        .ligne {
+            &:first-of-type {
+                flex-direction: row-reverse;
+                margin-bottom:-55rem;
+                z-index:1;
+                position:relative;
+
+                > div:last-of-type {
+                    width:60%;
+                }
+
+                > div:first-of-type {
+                    position:relative;
+                    width:40%;
+                }
+            }
+
+            &:last-of-type  {
+                z-index:0;
+                position:relative;
+
+                > div:first-of-type {
+                    padding-right:1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    p:first-of-type {
+                        margin-right:15rem;
+                        margin-bottom: 8rem;
+                    }
+
+                    p:last-of-type {
+                        margin-left:15rem;
+                        text-align: right;
+                    }
+                }
+
+                > div {
+                    width:50%;
+                }
+            }
+        }
+    }
 }

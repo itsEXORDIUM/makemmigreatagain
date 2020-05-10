@@ -1,10 +1,9 @@
-#accueil {
+#formation {
     .head_page {
-        background-color: $green;
+        background-color: $yellow;
     
         .left {
-            width:35%;
-            background-color: $green;
+            width:50%;
     
             .content {
                 position:absolute;
@@ -12,32 +11,28 @@
                 top:50%;
                 transform:translate(-50%, -50%);
                 left:50%;
-                padding-right: 60%;
+                padding-right: 0;
+                color:$green;
                 
                 h1 {
                     font-family:'morganite_bold', Arial, Helvetica, sans-serif;
-                    font-size: 5em;
+                    font-size: 15em;
                     line-height: 1.2em;
                     text-transform: uppercase;
-                }
-    
-                h2 {
-                    font-family:'morganite_bold', Arial, Helvetica, sans-serif;
-                    font-size: 3.5em;
-                    line-height: 1.2em;
+                    margin: 0;
                 }
     
                 p {
-                    font-family: 'muli_semibold', Arial, Helvetica, sans-serif;
-                    font-size: 1.8em;
+                    font-family: 'morganite_bold', Arial, Helvetica, sans-serif;
+                    font-size: 5em;
                     line-height: 1.2em;
+                    text-transform: uppercase;
                 }
             }
         }
     
         .right {
-            width:65%;
-            background-color: $blue;
+            width:50%;
         }
     }
 }
