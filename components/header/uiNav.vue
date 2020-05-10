@@ -4,12 +4,12 @@
     <div id="mainMenu">
       <div class="wrap">
         <ul class="pages">
-          <li><nuxt-link to="/">Accueil</nuxt-link></li>
-          <li><nuxt-link to="/formation">Formation</nuxt-link></li>
-          <li><nuxt-link to="/departement">Département</nuxt-link></li>
-          <li><nuxt-link to="/mobilite">Mobilité Internationale</nuxt-link></li>
-          <li><nuxt-link to="/actualites">Actualités</nuxt-link></li>
-          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+          <li @click="closeMenu()"><nuxt-link to="/">Accueil</nuxt-link></li>
+          <li @click="closeMenu()"><nuxt-link to="/formation">Formation</nuxt-link></li>
+          <li @click="closeMenu()"><nuxt-link to="/departement">Département</nuxt-link></li>
+          <li @click="closeMenu()"><nuxt-link to="/mobilite">Mobilité Internationale</nuxt-link></li>
+          <li @click="closeMenu()"><nuxt-link to="/actualites">Actualités</nuxt-link></li>
+          <li @click="closeMenu()"><nuxt-link to="/contact">Contact</nuxt-link></li>
         </ul>
 
         <ul class="reseaux">
@@ -29,6 +29,10 @@ export default {
     openMenu: function() {
       document.getElementById('mainMenu').classList.toggle('open');
       document.getElementById('menuhandle').classList.toggle('toCross');
+    },
+    closeMenu: function() {
+      document.getElementById('mainMenu').classList.remove('open');
+      document.getElementById('menuhandle').classList.remove('toCross');
     }
   }
 }

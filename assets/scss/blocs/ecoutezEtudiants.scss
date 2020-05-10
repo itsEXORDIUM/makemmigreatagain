@@ -1,11 +1,12 @@
 .temoignage {
     margin-top: 7rem;
+    padding-left:11.5rem;
     
     .bloc_titre {
         width:50%;
 
         svg {
-            margin-left: -16.5rem;
+            margin-left: -15.5rem;
         }
     }
 
@@ -165,7 +166,7 @@
 
 .prev {
     left: 0;
-    transform:translateX(-200%);
+    transform:translateX(-300%);
   }
 
 /* On hover, add a black background color with a little bit see-through */

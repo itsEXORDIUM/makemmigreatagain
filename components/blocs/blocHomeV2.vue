@@ -23,7 +23,7 @@
             <LeMeilleur/>
           </span>
         <p v-if="texte">{{texte}}</p>
-        <nuxt-link v-if="lien" :to="lien" class="action big">En savoir plus</nuxt-link>
+        <nuxt-link v-if="lien" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
       </div>
       <div>
         <img :src="images.image_2" alt=""/>
@@ -52,11 +52,13 @@ export default {
   },
   data() {
     return {
-      bloc: ''
+      bloc: '',
+      link: ''
     }
   },
   mounted() {
     this.checkBloc();
+    this.checkLien();
   },
   methods: {
     checkBloc: function() {
@@ -64,6 +66,16 @@ export default {
         this.bloc = 'altini';
       } else if (this.name == 'departement') {
         this.bloc = 'departement';
+      }
+    },
+    checkLien: function() {
+      if(this.lien) {
+        console.log(this.lien);
+        if(this.lien.includes('formation')) {
+          this.link = 'formation';
+        } else if(this.lien.includes('departement')) {
+          this.link = 'departement';
+        }
       }
     }
   }

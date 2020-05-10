@@ -17,8 +17,8 @@
         </span>
       </h2>
       <p v-if="texte" v-html="texte"></p>
-      <nuxt-link v-if="lien" :to="lien" class="action big">En savoir plus</nuxt-link>
-      <nuxt-link v-if="bloc == 'rejoindre'" to="/" class="action big">Postuler</nuxt-link>
+      <nuxt-link v-if="lien" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
+      <a v-if="bloc == 'rejoindre'" href="https://www.parcoursup.fr/" class="action big" target="_blank" title="Postuler sur ParcourSup (Nouvelle Fenêtre)">Postuler</a>
     </div>
     <div>
       <img v-for="(img, index) in images" :key="index" :src="img" alt=""/>
@@ -47,11 +47,16 @@ export default {
   },
   data() {
     return {
-      bloc: ''
+      bloc: '',
+      link: ''
     }
   },
   mounted() {
+    this.checkLien();
     this.checkBloc();
+  },
+  created() {
+    
   },
   methods: {
     checkBloc: function() {
@@ -63,6 +68,18 @@ export default {
         this.bloc = 'contact';
       } else if (this.name =='rejoindre') {
         this.bloc = 'rejoindre';
+      }
+    },
+    checkLien: function() {
+      if(this.lien) {
+        console.log(this.lien);
+        if(this.lien.includes('formation')) {
+          this.link = 'formation';
+        } else if(this.lien.includes('mobilite')) {
+          this.link = 'mobilite';
+        } else if(this.lien.includes('contact')) {
+          this.link = 'contact';
+        }
       }
     }
   }
