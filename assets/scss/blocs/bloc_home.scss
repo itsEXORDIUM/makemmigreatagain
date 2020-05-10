@@ -291,7 +291,7 @@
         flex-wrap: wrap;
         margin-top:30rem;
         position: relative;
-        padding-bottom:80rem;
+        padding-bottom:8rem;
 
         &::after {
             content:'';
@@ -383,6 +383,271 @@
 
                 > div {
                     width:50%;
+                }
+            }
+        }
+    }
+
+    &.developpement {
+        padding-top:35rem;
+        position:relative;
+
+        .bloc_titre {
+            align-items: center;
+            position: relative;
+
+            svg {
+                position:absolute;
+                top: -25rem;
+                left: 0rem;
+                width: 120%;
+                max-width: 120%;
+            }
+        }
+
+        .ligne {
+            &:first-of-type {
+                margin-bottom:-50rem;
+                z-index:1;
+                position:relative;
+
+                > div:last-of-type {
+                    width:60%;
+                }
+
+                > div:first-of-type {
+                    position:relative;
+                    width:40%;
+                }
+            }
+
+            &:last-of-type  {
+                z-index:0;
+                position:relative;
+                flex-direction: row-reverse;
+
+                > div:first-of-type {
+                    padding-left:1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    p:first-of-type {
+                        margin-right:15rem;
+                        margin-bottom: 8rem;
+                    }
+
+                    p:last-of-type {
+                        margin-left:15rem;
+                        text-align: right;
+                    }
+                }
+
+                > div {
+                    width:50%;
+
+                    img {
+                        height:87.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.communication {
+        padding-top:7rem;
+        position:relative;
+
+        .bloc_titre {
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            span {
+                text-align: center;
+            }
+
+            svg {
+                height:65rem;
+                margin-bottom: -52rem;
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
+
+        .ligne {
+            &:first-of-type {
+                flex-direction: column;
+                margin-bottom:-55rem;
+                margin-top: -25rem;
+                z-index:0;
+                position:relative;
+                background: url('../../static/imgs/taches/tache_jaune.png') no-repeat right 20rem;
+                background-size:80%;
+
+                > div:last-of-type {
+                    width:60%;
+                }
+
+                > div:first-of-type {
+                    position:relative;
+                    width:100%;
+                    height:65rem;
+                }
+            }
+
+            &:last-of-type  {
+                z-index:1;
+                position:relative;
+
+                > div:first-of-type {
+                    padding-right:1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    p:first-of-type {
+                        margin-right:15rem;
+                        margin-bottom: 8rem;
+                    }
+                }
+
+                > div {
+                    width:50%;
+
+                    img {
+                        height:87.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.motion {
+        padding-top:7rem;
+        position:relative;
+
+        .bloc_titre {
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            svg {
+                height:85rem;
+                margin-bottom:0;
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
+
+        .ligne {
+            &:first-of-type {
+                flex-direction: column;
+                z-index:0;
+                position:relative;
+                background: url('../../static/imgs/taches/tache_foncee_6.png') no-repeat center center;
+                background-size:contain;
+
+                > div:last-of-type {
+                    width:60%;
+                }
+
+                > div:first-of-type {
+                    position:relative;
+                    width:100%;
+                    height:85rem;
+                }
+            }
+
+            &:last-of-type  {
+                z-index:1;
+                position:relative;
+
+                > div:first-of-type {
+                    padding-left:1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    p:first-of-type {
+                        margin-right:15rem;
+                        margin-bottom: 8rem;
+                    }
+                }
+
+                > div {
+                    width:50%;
+
+                    img {
+                        height:87.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.stagealt {
+        padding-top:7rem;
+        position:relative;
+
+        .bloc_titre {
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            svg {
+                height:65rem;
+                margin-bottom: -50rem;
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
+
+        .ligne {
+            &:first-of-type {
+                flex-direction: column;
+                margin-bottom:-41rem;
+                margin-top: -25rem;
+                z-index:0;
+                position:relative;
+
+                > div:last-of-type {
+                    width:75%;
+                    margin-left:auto;
+                }
+
+                > div:first-of-type {
+                    position:relative;
+                    width:100%;
+                    height:65rem;
+                }
+            }
+
+            &:last-of-type  {
+                z-index:1;
+                position:relative;
+                flex-direction: row-reverse;
+
+                > div:first-of-type {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    p {
+                        margin-left:15rem;
+
+                        &:not(:last-of-type) {
+                            margin-bottom: 8rem;
+                        }
+                    }
+                }
+
+                > div {
+                    width:50%;
+
+                    img {
+                        height:87.9rem;
+                    }
                 }
             }
         }

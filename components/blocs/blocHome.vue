@@ -21,7 +21,7 @@
       </h2>
       <p v-if="texte" v-html="texte"></p>
       <nuxt-link v-if="lien" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
-      <a v-if="bloc == 'rejoindre' || 'formation'" href="https://www.parcoursup.fr/" class="action big" target="_blank" title="Postuler sur ParcourSup (Nouvelle Fenêtre)">Postuler</a>
+      <a v-if="bloc == 'rejoindre' || bloc == 'formation'" href="https://www.parcoursup.fr/" class="action big" target="_blank" title="Postuler sur ParcourSup (Nouvelle Fenêtre)">Postuler</a>
     </div>
     <div>
       <img v-for="(img, index) in images" :key="index" :src="img" alt=""/>

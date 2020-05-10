@@ -3,6 +3,11 @@
     <Formation :headPage="headPage"/>
     <BlocHome :name="nameformation" :titre="titreformation" :texte="texteformation" :image="imageformation"/>
     <BlocHomeV2 :name="namedesign" :titre="titredesign" :texte="textedesign" :images="imagesdesign"/>
+    <BlocHomeV2 :name="namedev" :titre="titredev" :texte="textedev" :images="imagesdev"/>
+    <BlocHomeV2 :name="namecom" :titre="titrecom" :texte="textecom" :images="imagescom"/>
+    <BlocHomeMotion :name="namemotion" :titre="titremotion" :soustitre="soustitremotion" :texte_1="texte1motion" :texte_2="texte2motion" :video_1="vid1motion" :video_2="vid2motion"/>
+    <p class="wrap">LES COURS ?</p>
+    <BlocHomeV2 :name="namestagealternant" :titre="titrestagealternant" :texte="textesstagealternant" :images="imagesstagealternant"/>
   </div>
 </template>
 
@@ -11,10 +16,11 @@ import axios from 'axios'
 import Formation from '~/components/head_pages/formation'
 import BlocHome from '~/components/blocs/blocHome'
 import BlocHomeV2 from '~/components/blocs/blocHomeV2'
+import BlocHomeMotion from '~/components/blocs/blocHomeMotion'
 
 export default {
   components: {
-    Formation, BlocHome, BlocHomeV2
+    Formation, BlocHome, BlocHomeV2, BlocHomeMotion
   },
   data() {
     return {
@@ -27,7 +33,26 @@ export default {
       namedesign : 'design',
       titredesign: '',
       textedesign: [],
-      imagesdesign: []
+      imagesdesign: [],
+      namedev : 'developpement',
+      titredev: '',
+      textedev: [],
+      imagesdev: [],
+      namecom : 'communication',
+      titrecom: '',
+      textecom: [],
+      imagescom: [],
+      namemotion : 'motion',
+      titremotion: '',
+      soustitremotion: '',
+      texte1motion: '',
+      texte2motion: '',
+      vid1motion: '',
+      vid2motion: '',
+      namestagealternant : 'stagealt',
+      titrestagealternant: '',
+      textesstagealternant: [],
+      imagesstagealternant: []
     }
   },
   mounted() {
@@ -47,6 +72,29 @@ export default {
           this.titredesign = response.data.acf.titre_design;
           this.textedesign = response.data.acf.textes_design;
           this.imagesdesign = response.data.acf.images_design;
+
+          // Le Developpement
+          this.titredev = response.data.acf.titre_developpement;
+          this.textedev = response.data.acf.textes_developpement;
+          this.imagesdev = response.data.acf.images_developpement;
+
+          // La Communication
+          this.titrecom = response.data.acf.titre_communication;
+          this.textecom = response.data.acf.texte_communication;
+          this.imagescom = response.data.acf.images_communication;
+
+          // Le Motion
+          this.titremotion = response.data.acf.titre_motion;
+          this.soustitremotion = response.data.acf.sous_titre_motion;
+          this.texte1motion = response.data.acf.texte_1_motion;
+          this.texte2motion = response.data.acf.texte_2_motion;
+          this.vid1motion = response.data.acf.video_1_motion;
+          this.vid2motion = response.data.acf.video_2_motion;
+
+          // Stages Alternance
+          this.titrestagealternant = response.data.acf.titre_stage_alternant;
+          this.imagesstagealternant = response.data.acf.images_stage_alternant;
+          this.textesstagealternant = response.data.acf.textes_stage_alternant;
       })
   }
 }

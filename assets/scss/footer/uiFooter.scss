@@ -1,6 +1,7 @@
 footer {
     margin-top:48rem;
     padding-bottom:15.5rem;
+    position: relative;
 
     #logoFooter {
         display: flex;
@@ -130,6 +131,28 @@ footer {
             a {
                 font-size: 1em;
             }
+        }
+    }
+
+    #backToTop {
+        position: absolute;
+        top:0;
+        transform:translateY(-150%);
+        right:1.3rem;
+        font-family: 'muli_bold', arial, helvetica, sans-serif;
+        font-size: 1.5em;
+        line-height: 1em;
+        color:$yellow;
+
+        &::after {
+            content:">";
+            display: block;
+            font-family: 'muli_bold', arial, helvetica, sans-serif;
+            transform-origin: center;
+            transform:rotate(-90deg);
+            color:$yellow;
+            font-size: 5em;
+            line-height: 0em;
         }
     }
 }
