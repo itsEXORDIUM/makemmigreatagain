@@ -1,0 +1,79 @@
+.bloc_lescours {
+    padding-top: 26.7rem;
+    display: flex;
+    flex-direction: column;
+
+    .bloc_title {
+        width:50%;
+        margin-left: auto;
+        padding-left: 14rem;
+
+        .bloc_titre {
+            font-family: 'morganite_bold', arial, helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 30em;
+            line-height: 1em;
+            margin: 0;
+
+            span {
+                display: block;
+                font-size: 10rem;
+                line-height: 1.2em;
+            }
+        }
+
+        p {
+            font-size: 2em;
+        }
+    }
+
+    .buttons_annees {
+        width:50%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 17.7rem;
+        margin-bottom: 8rem;
+
+        li {
+            button {
+                font-family: 'morganite_bold', arial, helvetica, sans-serif;
+                font-size: 9em;
+                line-height: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width:22.5rem;
+                height:9.3rem;
+                border-radius:47%;
+                border:1px solid $green;
+                color:$blue;
+                text-transform: uppercase;
+                background: $darkgrey;
+                transition:all .3s ease-in-out;
+
+                &.active {
+                    background: $green;
+                }
+
+                &:not(.active):hover {
+                    background: rgba($green, 0.5);
+                }
+            }
+        }
+    }
+
+    .lists {
+        width:50%;
+        margin: 0 auto;
+
+        .matiere {
+            font-size: 3em;
+            line-height: 1.2em;
+        }
+
+        p {
+            font-size: 2em;
+        }
+    }
+}

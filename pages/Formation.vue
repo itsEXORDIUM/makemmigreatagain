@@ -6,7 +6,7 @@
     <BlocHomeV2 :name="namedev" :titre="titredev" :texte="textedev" :images="imagesdev"/>
     <BlocHomeV2 :name="namecom" :titre="titrecom" :texte="textecom" :images="imagescom"/>
     <BlocHomeMotion :name="namemotion" :titre="titremotion" :soustitre="soustitremotion" :texte_1="texte1motion" :texte_2="texte2motion" :video_1="vid1motion" :video_2="vid2motion"/>
-    <p class="wrap">LES COURS ?</p>
+    <BlocCours :name="namecours" :titre="titrecours" :soustitre="soustitrecours" :texte="textecours"/>
     <BlocHomeV2 :name="namestagealternant" :titre="titrestagealternant" :texte="textesstagealternant" :images="imagesstagealternant"/>
   </div>
 </template>
@@ -17,10 +17,11 @@ import Formation from '~/components/head_pages/formation'
 import BlocHome from '~/components/blocs/blocHome'
 import BlocHomeV2 from '~/components/blocs/blocHomeV2'
 import BlocHomeMotion from '~/components/blocs/blocHomeMotion'
+import BlocCours from '~/components/blocs/blocCours'
 
 export default {
   components: {
-    Formation, BlocHome, BlocHomeV2, BlocHomeMotion
+    Formation, BlocHome, BlocHomeV2, BlocHomeMotion, BlocCours
   },
   data() {
     return {
@@ -52,7 +53,11 @@ export default {
       namestagealternant : 'stagealt',
       titrestagealternant: '',
       textesstagealternant: [],
-      imagesstagealternant: []
+      imagesstagealternant: [],
+      namecours:'bloc_lescours',
+      titrecours: '',
+      soustitrecours: '',
+      textecours: ''
     }
   },
   mounted() {
@@ -88,13 +93,18 @@ export default {
           this.soustitremotion = response.data.acf.sous_titre_motion;
           this.texte1motion = response.data.acf.texte_1_motion;
           this.texte2motion = response.data.acf.texte_2_motion;
-          this.vid1motion = response.data.acf.video_1_motion;
-          this.vid2motion = response.data.acf.video_2_motion;
+          this.vid1motion = response.data.acf.videos_motion.video_1;
+          this.vid2motion = response.data.acf.videos_motion.video_2;
 
           // Stages Alternance
           this.titrestagealternant = response.data.acf.titre_stage_alternant;
           this.imagesstagealternant = response.data.acf.images_stage_alternant;
           this.textesstagealternant = response.data.acf.textes_stage_alternant;
+
+          // Les cours
+          this.titrecours = response.data.acf.titre_cours_bref;
+          this.soustitrecours = response.data.acf.soustitre_cours_bref;
+          this.textecours = response.data.acf.texte_cours_bref;
       })
   }
 }
