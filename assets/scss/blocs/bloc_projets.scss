@@ -1,0 +1,82 @@
+.bloc_projets {
+    .bloc_titre {
+        width:50%;
+
+        svg {
+            margin-top: -10rem;
+            margin-bottom: -25rem;
+        }
+    }
+
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+
+        .projet {
+            width:33.33%;
+            height:43.9rem;
+            position: relative;
+            z-index:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                a {
+                    opacity:0.8;
+                }
+
+                .content {
+                    opacity:1;
+                }
+            }
+
+            img {
+                position: absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                object-fit: cover;
+                z-index:-1;
+            }
+
+            .content {
+                text-align: center;
+                opacity:0;
+                z-index:1;
+                transition: opacity .3s ease-in-out;
+                pointer-events: none;
+
+                p, h3 {
+                    line-height: 1.2em;
+                    color:$yellow;
+                }
+
+                .titre_projet {
+                    font-size: 4em;
+                }
+
+                .nom {
+                    font-size: 2.5em;
+                }
+                
+                .promo {
+                    font-size: 1.8em;
+                }
+            }
+
+            a {
+                position: absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background-color: #0D0404;
+                opacity:0;
+                z-index:0;
+                transition: opacity .3s ease-in-out;
+            }
+        }
+    }
+}

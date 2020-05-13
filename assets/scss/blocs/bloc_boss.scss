@@ -1,0 +1,43 @@
+.blocboss {
+    .bloc_title {
+
+        #pretssvg {
+            width: 75%;
+            margin-top: -20rem;
+        }
+
+        #bosssvg {
+            margin-top: -73rem;
+            width: 65%;
+            padding-right: 5rem;
+            float: right;
+            margin-bottom: -15rem;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        p {
+            font-size: 1.8em;
+            width:45%;
+            text-align: center;
+            margin-top: 8rem;
+        }
+
+        p.en_avant {
+            font-family: 'morganite_bold', arial, helvetica, sans-serif;
+            font-size: 10em;
+            text-transform: uppercase;
+            margin: 0;
+
+            span {
+                font-size: 12rem;
+            }
+        }
+    }
+}

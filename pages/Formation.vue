@@ -8,6 +8,8 @@
     <BlocHomeMotion :name="namemotion" :titre="titremotion" :soustitre="soustitremotion" :texte_1="texte1motion" :texte_2="texte2motion" :video_1="vid1motion" :video_2="vid2motion"/>
     <BlocCours :name="namecours" :titre="titrecours" :soustitre="soustitrecours" :texte="textecours"/>
     <BlocHomeV2 :name="namestagealternant" :titre="titrestagealternant" :texte="textesstagealternant" :images="imagesstagealternant"/>
+    <BlocBoss :name="nameboss" :titre="titreboss" :infosun="infosbossun" :infosdeux="infosbossdeux" :infostrois="infosbosstrois" :texte="texteboss"/>
+    <BlocProjets :titre="titreprojets"/>
   </div>
 </template>
 
@@ -18,10 +20,12 @@ import BlocHome from '~/components/blocs/blocHome'
 import BlocHomeV2 from '~/components/blocs/blocHomeV2'
 import BlocHomeMotion from '~/components/blocs/blocHomeMotion'
 import BlocCours from '~/components/blocs/blocCours'
+import BlocBoss from '~/components/blocs/blocboss'
+import BlocProjets from '~/components/blocs/blocprojets'
 
 export default {
   components: {
-    Formation, BlocHome, BlocHomeV2, BlocHomeMotion, BlocCours
+    Formation, BlocHome, BlocHomeV2, BlocHomeMotion, BlocCours, BlocBoss, BlocProjets
   },
   data() {
     return {
@@ -57,7 +61,14 @@ export default {
       namecours:'bloc_lescours',
       titrecours: '',
       soustitrecours: '',
-      textecours: ''
+      textecours: '',
+      nameboss: 'blocboss',
+      titreboss: '',
+      infosbossun: [],
+      infosbossdeux: [],
+      infosbosstrois: [],
+      texteboss: '',
+      titreprojets: ''
     }
   },
   mounted() {
@@ -105,6 +116,16 @@ export default {
           this.titrecours = response.data.acf.titre_cours_bref;
           this.soustitrecours = response.data.acf.soustitre_cours_bref;
           this.textecours = response.data.acf.texte_cours_bref;
+
+          // Le Boss
+          this.titreboss = response.data.acf.titre_boss;
+          this.infosbossun = response.data.acf.infos_boss.texte_1;
+          this.infosbossdeux = response.data.acf.infos_boss.texte_2;
+          this.infosbosstrois = response.data.acf.infos_boss.texte_3;
+          this.texteboss = response.data.acf.texte_boss;
+
+          // Les projets
+          this.titreprojets = response.data.acf.titre_projets;
       })
   }
 }
