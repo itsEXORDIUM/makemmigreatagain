@@ -31,7 +31,8 @@ export default {
       }, 'slow', 'swing');
     },
     setPage: function() {
-      document.querySelector('body').style.backgroundColor = '#D8B08C';
+      document.querySelector('body').className = '';
+      document.querySelector('body').classList.add('mentionsleg');
     }
   }
 }

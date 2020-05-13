@@ -48,15 +48,8 @@ export default {
       this.checkPage();
     },
     checkPage: function() {
-      if(this.main === 'mobilite' || this.main === 'departement' || this.main === 'error') {
-        document.querySelector('body').style.backgroundColor = '#106466';
-      } else if(this.main === 'mentionsleg') {
-        document.querySelector('body').style.backgroundColor = '#D8B08C';
-      } else if (this.main === 'actu') {
-        document.querySelector('body').style.backgroundColor = '#FFCB9B';
-      } else {
-        document.querySelector('body').style.backgroundColor = '#2C3532';
-      }
+      document.querySelector('body').className = '';
+      document.querySelector('body').classList.add(this.main);
     }
   }
 }
