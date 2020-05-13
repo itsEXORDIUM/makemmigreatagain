@@ -1,6 +1,24 @@
-#mobilite {
+body.mobilite {
     background-color:$green;
+
+    #menuhandle {
+        background-color:#ffffff;
     
+        &::before {
+            background-color:#ffffff;
+        }
+    
+        &::after {
+            background-color:#ffffff;
+        }
+
+        &.toCross {
+            background-color: transparent;
+        }
+    }
+}
+
+#mobilite {
     .head_page {
         display: flex;
         justify-content: space-between;
