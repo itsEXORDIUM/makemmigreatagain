@@ -14,7 +14,7 @@
       <div id="contact">
         <p class="intitule">Département métiers du multimédia et de l'internet de Montbéliard</p>
         <p class="adresse"><span>4, place Tharradin - 25 200 Montbéliard</span> <span>- Tél. <a href="0381994734">03 81 99 47 34</a></span></p>
-        <p><nuxt-link to="/mentionslegales">Mentions légales</nuxt-link></p>
+        <p data-lien="mentionsleg" @click="setPage()"><nuxt-link to="/mentionslegales">Mentions légales</nuxt-link></p>
       </div>
       <a id="backToTop" href="#top"><span class="show-for-sr">Retourner en </span>Haut de page</a>
   </footer>
@@ -23,13 +23,15 @@
 <script>
 export default {
   mounted() {
-
   },
   methods: {
     backToTop: function() {
       this.$el.stop().animate({
         scrollTop: 0
       }, 'slow', 'swing');
+    },
+    setPage: function() {
+      document.querySelector('body').style.backgroundColor = '#D8B08C';
     }
   }
 }

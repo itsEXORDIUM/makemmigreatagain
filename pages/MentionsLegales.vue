@@ -1,5 +1,5 @@
 <template>
-  <h1>Mentions Légales</h1>
+  <main id="mentionsleg"></main>
 </template>
 
 <script>

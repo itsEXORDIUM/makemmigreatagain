@@ -1,5 +1,5 @@
 <template>
-  <div id="formation">
+  <main id="formation">
     <Formation :headPage="headPage"/>
     <BlocHome :name="nameformation" :titre="titreformation" :texte="texteformation" :image="imageformation"/>
     <BlocHomeV2 :name="namedesign" :titre="titredesign" :texte="textedesign" :images="imagesdesign"/>
@@ -10,7 +10,7 @@
     <BlocHomeV2 :name="namestagealternant" :titre="titrestagealternant" :texte="textesstagealternant" :images="imagesstagealternant"/>
     <BlocBoss :name="nameboss" :titre="titreboss" :infosun="infosbossun" :infosdeux="infosbossdeux" :infostrois="infosbosstrois" :texte="texteboss"/>
     <BlocProjets :titre="titreprojets"/>
-  </div>
+  </main>
 </template>
 
 <script>

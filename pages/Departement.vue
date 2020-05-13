@@ -1,5 +1,5 @@
 <template>
-  <h1>Département</h1>
+  <main id="departement"></main>
 </template>
 
 <script>

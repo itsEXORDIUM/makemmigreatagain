@@ -1,5 +1,5 @@
 <template>
-  <div id="accueil">
+  <main id="accueil">
     <Accueil :headPage="headPage"/>
     <BlocHome :name="namepolyvalents" :titre="titrepolyvalents" :texte="textepolyvalents" :lien="lienpolyvalents" :images="imagespolyvalents"/>
     <BlocHomeV2 :name="namealtini" :titre="titrealtini" :soustitre="soustitrealtini" :texte="textealtini" :lien="lienaltini" :images="imagesaltini"/>
@@ -8,7 +8,7 @@
     <BlocHome :name="namecontact" :titre="titrecontact" :texte="textecontact" :lien="liencontact" :image="imagecontact"/>
     <EcoutezEtudiants :titre="titrenosetudiants"/>
     <BlocHome :name="namerejoindre" :titre="titrerejoindre" :image="imagerejoindre"/>
-  </div>
+  </main>
 </template>
 
 <script>
