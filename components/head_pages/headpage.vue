@@ -7,7 +7,7 @@
       <p>{{texte}}</p>
     </div>
     <img :src="image" alt=""/>
-    <button class="ancre">Découvrir MMI Montbéliard</button>
+    <button class="ancre"><span class="show-for-sr">Découvrir MMI Montbéliard</span></button>
   </div>
 </template>
 

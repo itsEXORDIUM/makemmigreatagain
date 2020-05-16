@@ -22,6 +22,12 @@
           <span v-if="bloc == 'stagealt'">
             <StageAlt/>
           </span>
+          <span v-if="bloc == 'canada'">
+            <Canada/>
+          </span>
+          <span v-if="bloc == 'barcelone'">
+            <Barcelone/>
+          </span>
         </h2>
       </div>
       <div>
@@ -47,6 +53,10 @@
         <img :src="images.image_2" alt=""/>
       </div>
     </div>
+    <video v-if="bloc == 'barcelone'" width="1088" height="612" controls>
+      <source :src="video.url" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
   </div>
 </template>
 
@@ -58,6 +68,8 @@ import Design from '~/components/titres/design'
 import Developpement from '~/components/titres/developpement'
 import Communication from '~/components/titres/communication'
 import StageAlt from '~/components/titres/stagealt'
+import Canada from '~/components/titres/canada'
+import Barcelone from '~/components/titres/barcelone'
 
 export default {
   props: {
@@ -67,10 +79,11 @@ export default {
       texte: '',
       lien: '',
       images: Array,
-      image: ''
+      image: '',
+      video: Array
   },
   components: {
-    Alternanceini, NotreDepartement, LeMeilleur, Design, Developpement, Communication, StageAlt
+    Alternanceini, NotreDepartement, LeMeilleur, Design, Developpement, Communication, StageAlt, Canada, Barcelone
   },
   data() {
     return {
@@ -96,6 +109,10 @@ export default {
         this.bloc = 'communication';
       } else if (this.name == 'stagealt') {
         this.bloc = 'stagealt';
+      } else if (this.name == 'canada') {
+        this.bloc = 'canada';
+      } else if (this.name == 'barcelone') {
+        this.bloc = 'barcelone';
       }
     },
     checkLien: function() {

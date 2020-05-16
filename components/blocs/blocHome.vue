@@ -18,10 +18,13 @@
         <span v-if="bloc == 'formation'">
           <Formation/>
         </span>
+        <span v-if="bloc == 'stageetranger'">
+          <StageEtranger/>
+        </span>
       </h2>
       <p v-if="texte" v-html="texte"></p>
       <nuxt-link v-if="lien" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
-      <a v-if="bloc == 'rejoindre' || bloc == 'formation'" href="https://www.parcoursup.fr/" class="action big" target="_blank" title="Postuler sur ParcourSup (Nouvelle Fenêtre)">Postuler</a>
+      <nuxt-link v-if="bloc == 'rejoindre' || bloc == 'formation'" to="/postuler" class="action big">Postuler</nuxt-link>
     </div>
     <div>
       <img v-for="(img, index) in images" :key="index" :src="img" alt=""/>
@@ -36,6 +39,7 @@ import VoirPays from '~/components/titres/voirpays'
 import OnsAppelle from '~/components/titres/onsappelle'
 import Rejoindre from '~/components/titres/rejoindre'
 import Formation from '~/components/titres/formation'
+import StageEtranger from '~/components/titres/stageetranger'
 
 export default {
   props: {
@@ -47,7 +51,7 @@ export default {
       image: ''
   },
   components: {
-    Polyvalents, VoirPays, OnsAppelle, Rejoindre, Formation
+    Polyvalents, VoirPays, OnsAppelle, Rejoindre, Formation, StageEtranger
   },
   data() {
     return {
@@ -74,6 +78,8 @@ export default {
         this.bloc = 'rejoindre';
       } else if (this.name =='formation') {
         this.bloc = 'formation';
+      } else if (this.name =='stageetranger') {
+        this.bloc = 'stageetranger';
       }
     },
     checkLien: function() {
@@ -85,6 +91,8 @@ export default {
           this.link = 'mobilite';
         } else if(this.lien.includes('contact')) {
           this.link = 'contact';
+        } else if(this.lien.includes('postuler')) {
+          this.link = 'postuler';
         }
       }
     }
