@@ -1,0 +1,32 @@
+body.mentionsleg {
+    background-color: $brown;
+
+    #menuhandle {
+        background-color: #ffffff;
+
+        &::before {
+            background-color: #ffffff;
+        }
+
+        &::after {
+            background-color: #ffffff;
+        }
+
+        &.toCross {
+            background-color: transparent;
+        }
+    }
+}
+
+#mentionsleg > .head_page {
+    > h1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        svg {
+            width: 120rem;
+            margin-top: -82px;
+        }
+    }
+}
