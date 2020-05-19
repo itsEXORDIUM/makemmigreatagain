@@ -1,5 +1,6 @@
 body.mentionsleg {
     background-color: $brown;
+    color: $darkgrey;
 
     #menuhandle {
         background-color: #ffffff;
@@ -28,5 +29,39 @@ body.mentionsleg {
             width: 120rem;
             margin-top: -82px;
         }
+    }
+
+    .ancre {
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform:translateX(-50%);
+        font-family: 'muli_semibold', Arial, Helvetica, sans-serif;
+        font-size: 1.6em;
+        line-height: 1.2em;
+        color:$blue;
+        text-align: center;
+
+        &::after {
+            background:url('../../static/svgs/scrollDark.svg') no-repeat center center;
+            background-size: cover;
+            margin: 1rem auto;
+        }
+    }
+
+}
+
+#mentionsleg > .blocdroitsauteurs h3 {
+    font-family: 'morganite_bold';
+    font-size: 10em;
+}
+
+#mentionsleg > .blocdroitsauteurs {
+    h3 {
+        font-family: 'morganite_bold';
+    font-size: 10em;
+    }
+    p {
+        font-size: 1.8em;
     }
 }
