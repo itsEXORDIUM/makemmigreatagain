@@ -21,6 +21,9 @@
         <span v-if="bloc == 'stageetranger'">
           <StageEtranger/>
         </span>
+        <span v-if="bloc == 'communaute'">
+          <Communaute/>
+        </span>
       </h2>
       <p v-if="texte" v-html="texte"></p>
       <nuxt-link v-if="lien" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
@@ -40,6 +43,7 @@ import OnsAppelle from '~/components/titres/onsappelle'
 import Rejoindre from '~/components/titres/rejoindre'
 import Formation from '~/components/titres/formation'
 import StageEtranger from '~/components/titres/stageetranger'
+import Communaute from '~/components/titres/331'
 
 export default {
   props: {
@@ -51,7 +55,7 @@ export default {
       image: ''
   },
   components: {
-    Polyvalents, VoirPays, OnsAppelle, Rejoindre, Formation, StageEtranger
+    Polyvalents, VoirPays, OnsAppelle, Rejoindre, Formation, StageEtranger, Communaute
   },
   data() {
     return {
@@ -80,6 +84,8 @@ export default {
         this.bloc = 'formation';
       } else if (this.name =='stageetranger') {
         this.bloc = 'stageetranger';
+      } else if (this.name =='communaute') {
+        this.bloc = 'communaute';
       }
     },
     checkLien: function() {

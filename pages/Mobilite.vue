@@ -16,7 +16,7 @@
 
 <script>
 import axios from 'axios'
-import HeadPage from '~/components/head_pages/headpage'
+import HeadPage from '~/components/head_pages/mobilite'
 import BlocHome from '~/components/blocs/blocHome'
 import BlocHomeV2 from '~/components/blocs/blocHomeV2'
 import Rejoignez from '~/components/titres/rejoignez'

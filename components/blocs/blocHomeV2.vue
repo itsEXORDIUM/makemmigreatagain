@@ -28,6 +28,9 @@
           <span v-if="bloc == 'barcelone'">
             <Barcelone/>
           </span>
+          <span v-if="bloc == 'defi'">
+            <Defi/>
+          </span>
         </h2>
       </div>
       <div>
@@ -70,6 +73,7 @@ import Communication from '~/components/titres/communication'
 import StageAlt from '~/components/titres/stagealt'
 import Canada from '~/components/titres/canada'
 import Barcelone from '~/components/titres/barcelone'
+import Defi from '~/components/titres/defi'
 
 export default {
   props: {
@@ -83,7 +87,7 @@ export default {
       video: Array
   },
   components: {
-    Alternanceini, NotreDepartement, LeMeilleur, Design, Developpement, Communication, StageAlt, Canada, Barcelone
+    Alternanceini, NotreDepartement, LeMeilleur, Design, Developpement, Communication, StageAlt, Canada, Barcelone, Defi
   },
   data() {
     return {
@@ -113,6 +117,8 @@ export default {
         this.bloc = 'canada';
       } else if (this.name == 'barcelone') {
         this.bloc = 'barcelone';
+      } else if (this.name == 'defi') {
+        this.bloc = 'defi';
       }
     },
     checkLien: function() {

@@ -1,20 +1,18 @@
 <template>
   <div class="head_page wrap">
-    <h1 class="bloc_title"><span class="show-for-sr">{{titre}}</span>
-      <Bienvenue/>
-    </h1>
     <div class="content">
-      <img :src="image" alt=""/>
+      <h1 class="bloc_title"><span class="show-for-sr">{{titre}}</span>
+        <Balader/>
+      </h1>
       <p>{{texte}}</p>
-      <nuxt-link to="/postuler" class="action big">Postuler</nuxt-link>
     </div>
-
+    <img :src="image" alt=""/>
     <button class="ancre"><span class="show-for-sr">Découvrir MMI Montbéliard</span></button>
   </div>
 </template>
 
 <script>
-import Bienvenue from '~/components/titres/bienvenue'
+import Balader from '~/components/titres/balader'
 
 export default {
   props: {
@@ -23,7 +21,7 @@ export default {
     texte:''
   },
   components: {
-    Bienvenue
+    Balader
   }
 }
 </script>
