@@ -38,7 +38,9 @@
         </span>
       </h2>
       <p v-if="texte" v-html="texte"></p>
-      <nuxt-link v-if="lien && bloc != 'espacepro' && bloc != 'adoptalt' && bloc != 'unprojet'" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
+      <nuxt-link v-if="lien && bloc == 'polyvalents'" to="/formation" class="action big">En savoir plus</nuxt-link>
+      <nuxt-link v-if="lien && bloc == 'contact'" to="/contact" class="action big">En savoir plus</nuxt-link>
+      <nuxt-link v-if="lien && bloc == 'pays'" to="/mobilite" class="action big">En savoir plus</nuxt-link>
       <nuxt-link v-if="bloc == 'rejoindre' || bloc == 'formation'" to="/postuler" class="action big">Postuler</nuxt-link>
       <a :href="lien" title="Déposer une offre (Nouvelle fenêtre)" target="_blank" v-if="bloc == 'espacepro'" to="/" class="action big">Déposer une offre</a>
       <a :href="lien" title="Adoptez un alternant (Nouvelle fenêtre)" target="_blank" v-if="bloc == 'adoptalt'" to="/" class="action big">Adoptez un apprenti</a>
@@ -78,16 +80,11 @@ export default {
   },
   data() {
     return {
-      bloc: '',
-      link: ''
+      bloc: ''
     }
   },
   mounted() {
-    this.checkLien();
     this.checkBloc();
-  },
-  created() {
-    
   },
   methods: {
     checkBloc: function() {
@@ -113,20 +110,6 @@ export default {
         this.bloc = 'adoptalt';
       } else if (this.name =='unprojet') {
         this.bloc = 'unprojet';
-      }
-    },
-    checkLien: function() {
-      if(this.lien) {
-        console.log(this.lien);
-        if(this.lien.includes('formation')) {
-          this.link = 'formation';
-        } else if(this.lien.includes('mobilite')) {
-          this.link = 'mobilite';
-        } else if(this.lien.includes('contact')) {
-          this.link = 'contact';
-        } else if(this.lien.includes('postuler')) {
-          this.link = 'postuler';
-        }
       }
     }
   }

@@ -3,7 +3,7 @@
     <div class="left">
       <div class="content wrap">
         <div v-html="headPage"></div>
-        <nuxt-link to="/" class="action big dark">Voir le profil des étudiants</nuxt-link>
+        <nuxt-link to="/formation" class="action big dark">Voir le profil des étudiants</nuxt-link>
       </div>
     </div>
     <div class="right">

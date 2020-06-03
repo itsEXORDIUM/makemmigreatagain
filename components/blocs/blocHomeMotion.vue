@@ -8,10 +8,7 @@
         </h2>
       </div>
       <div>
-        <video width="100%" height="768" controls>
-          <source :src="video_1" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <video width="100%" height="768" :src="video_1" muted autoplay loop></video>
       </div>
     </div>
     <div class="ligne">
@@ -21,10 +18,7 @@
         <p>{{texte_2}}</p>
       </div>
       <div>
-        <video width="100%" height="879" controls>
-          <source :src="video_2" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
+        <video width="100%" height="879" :src="video_2" muted autoplay loop></video>
       </div>
     </div>
   </div>
@@ -48,6 +42,19 @@ export default {
   },
   data() {
     return {
+    }
+  },
+  mounted() {
+    this.playVideos();
+  },
+  methods: {
+    playVideos: function() {
+      var videos = document.querySelectorAll('video');
+      var i;
+      for(i=0;i<videos.length;i++) {
+        var video = videos[i];
+        video.play();
+      }
     }
   }
 }
