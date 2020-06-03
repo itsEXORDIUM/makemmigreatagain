@@ -24,10 +24,25 @@
         <span v-if="bloc == 'communaute'">
           <Communaute/>
         </span>
+        <span v-if="bloc == 'frigo'">
+          <Frigo/>
+        </span>
+        <span v-if="bloc == 'espacepro'">
+          <EspacePro/>
+        </span>
+        <span v-if="bloc == 'adoptalt'">
+          <AdoptAlt/>
+        </span>
+        <span v-if="bloc == 'unprojet'">
+          <UnProjet/>
+        </span>
       </h2>
       <p v-if="texte" v-html="texte"></p>
-      <nuxt-link v-if="lien" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
+      <nuxt-link v-if="lien && bloc != 'espacepro' && bloc != 'adoptalt' && bloc != 'unprojet'" :to="`/${link}`" class="action big">En savoir plus</nuxt-link>
       <nuxt-link v-if="bloc == 'rejoindre' || bloc == 'formation'" to="/postuler" class="action big">Postuler</nuxt-link>
+      <a :href="lien" title="Déposer une offre (Nouvelle fenêtre)" target="_blank" v-if="bloc == 'espacepro'" to="/" class="action big">Déposer une offre</a>
+      <a :href="lien" title="Adoptez un alternant (Nouvelle fenêtre)" target="_blank" v-if="bloc == 'adoptalt'" to="/" class="action big">Adoptez un apprenti</a>
+      <a :href="lien" title="Proposez un projet (Nouvelle fenêtre)" target="_blank" v-if="bloc == 'unprojet'" to="/" class="action big">Proposer un projet</a>
     </div>
     <div>
       <img v-for="(img, index) in images" :key="index" :src="img" alt=""/>
@@ -44,6 +59,10 @@ import Rejoindre from '~/components/titres/rejoindre'
 import Formation from '~/components/titres/formation'
 import StageEtranger from '~/components/titres/stageetranger'
 import Communaute from '~/components/titres/331'
+import Frigo from '~/components/titres/frigo'
+import EspacePro from '~/components/titres/espacepro'
+import AdoptAlt from '~/components/titres/adoptalt'
+import UnProjet from '~/components/titres/unprojet'
 
 export default {
   props: {
@@ -55,7 +74,7 @@ export default {
       image: ''
   },
   components: {
-    Polyvalents, VoirPays, OnsAppelle, Rejoindre, Formation, StageEtranger, Communaute
+    Polyvalents, VoirPays, OnsAppelle, Rejoindre, Formation, StageEtranger, Communaute, Frigo, EspacePro, AdoptAlt, UnProjet
   },
   data() {
     return {
@@ -86,6 +105,14 @@ export default {
         this.bloc = 'stageetranger';
       } else if (this.name =='communaute') {
         this.bloc = 'communaute';
+      } else if (this.name =='frigo') {
+        this.bloc = 'frigo';
+      } else if (this.name =='espacepro') {
+        this.bloc = 'espacepro';
+      } else if (this.name =='adoptalt') {
+        this.bloc = 'adoptalt';
+      } else if (this.name =='unprojet') {
+        this.bloc = 'unprojet';
       }
     },
     checkLien: function() {

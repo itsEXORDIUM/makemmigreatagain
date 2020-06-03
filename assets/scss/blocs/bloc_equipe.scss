@@ -1,0 +1,85 @@
+.bloc_equipe {
+
+    .bloc_title {
+        svg {
+            width:67%;
+            margin-left: -7rem;
+            margin-top: -15rem;
+            margin-bottom:-10rem;
+        }
+    }
+
+    .membrepedago {
+        display: flex;
+
+        &:not(:first-of-type) {
+            margin-top: 5rem;
+        }
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+
+            img {
+                margin-right: 0;
+                margin-left: 1.5rem;
+            }
+
+            .content {
+                text-align: right;
+
+                .stats {
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        img {
+            width:67.4rem;
+            height:54.5rem;
+            object-fit: cover;
+            margin-right: 1.5rem;
+        }
+
+        .content {
+            font-family: 'morganite_bold', 'muli bold', arial, helvetica, sans-serif;
+            width:20%;
+
+            .name {
+                font-size: 15em;
+                line-height: 0.8em;
+                color:$yellow;
+                text-transform: uppercase;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+
+            .commentaire {
+                font-size: 5em;
+                line-height: 1.2em;
+                color:$blue;
+                text-transform: uppercase;
+                margin: 0;
+                margin-bottom: 5rem;
+            }
+
+            .stats {
+                display: flex;
+                flex-wrap: wrap;
+
+                p {
+                    font-size: 5em;
+                    line-height: 1.2em;
+                    color:$yellow;
+                    margin: 0;
+                    margin-bottom: 1rem;
+                }
+
+                div:last-of-type {
+                    margin-left:3.5rem;
+                }
+            }
+        }
+    }
+
+
+}
