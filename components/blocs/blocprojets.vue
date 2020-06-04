@@ -12,7 +12,7 @@
           <p class="nom">{{projet.acf.auteur}}</p>
           <p class="promo">{{projet.acf.promo}}</p>
         </div>
-        <a :href="projet.acf.lien" :title="`Voir le projet ${projet.title.rendered} (Nouvelle fenêtre)`" target="_blank"><span class="show-for-sr">Lien du projet</span></a>
+        <a :href="projet.acf.lien" :title="`Voir le projet ${projet.title.rendered} (Nouvelle fenêtre)`" target="_blank"><span class="show-for-sr">Voir le projet</span></a>
         <img :src="projet.acf.image" alt=""/>
       </div>
     </div>

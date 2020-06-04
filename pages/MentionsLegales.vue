@@ -1,5 +1,5 @@
 <template>
-  <main id="mentionsleg">
+  <main id="mentionsleg" role="main">
     <div class="head_page">
       <h1>
         <span class="show-for-sr">{{titreMentionsleg}}</span>
@@ -24,6 +24,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: '',
       titreMentionsleg: '',
       namedroitsauteurs: 'blocdroitsauteurs',
       titredroitsauteurs: '',
@@ -33,11 +34,22 @@ export default {
       textedroitsauteurs: ''
     };
   },
+  head () {
+    return {
+      title: this.pageTitle,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
+    }
+  },
   mounted() {
     // Get Mentionslégales Data
     axios
       .get("http://51.158.125.115/wp-json/wp/v2/pages/12?_embed")
       .then(response => {
+        this.pageTitle = response.data.title.rendered;
+
         // Headpage
         this.titreMentionsleg = response.data.acf.titre_mentions_legales;
 

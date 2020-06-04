@@ -9,7 +9,7 @@
     <div class="right">
       <img src="~/static/imgs/students.png" alt=""/>
     </div>
-    <button class="ancre">Découvrir MMI Montbéliard</button>
+    <button tabindex="0" aria-label="Découvrir MMI Montbéliard" role="button" class="ancre">Découvrir MMI Montbéliard</button>
   </div>
 </template>
 

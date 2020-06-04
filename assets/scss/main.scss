@@ -22,6 +22,10 @@ body {
     overflow-x:hidden;
 }
 
+body.overlay {
+    overflow:hidden;
+}
+
 img, svg {
     max-width:100%;
 }

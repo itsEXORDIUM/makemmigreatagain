@@ -152,3 +152,21 @@
         }
     }
 }
+
+body.scrolled {
+    #menuhandle {
+        background-color: #ffffff;
+
+        &::before {
+            background-color: #ffffff;
+        }
+
+        &::after {
+            background-color: #ffffff;
+        }
+
+        &.toCross {
+            background-color: transparent;
+        }
+    }
+}

@@ -123,6 +123,10 @@
                 width:53.6rem;
                 height:53rem;
                 object-fit: cover;
+
+                @media screen and (max-width: $break-mid) {
+                    width:32.6rem;
+                }
             }
         }
     }

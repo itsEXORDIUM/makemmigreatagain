@@ -1,5 +1,5 @@
 <template>
-   <main id="mobilite">
+   <main id="mobilite" role="main">
      <HeadPage :titre="titremobilite" :image="imagemobilite" :texte="textemobilite"/>
      <BlocHome :name="namestage" :titre="titrestage" :texte="textestage" :image="imagestage"/>
      <BlocHomeV2 :name="namecanada" :titre="titrecanada" :texte="textecanada" :images="imagescanada"/>
@@ -27,6 +27,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: '',
       titremobilite: '',
       imagemobilite: '',
       textemobilite: '',
@@ -45,10 +46,21 @@ export default {
       titrerejoindre: ''
     }
   },
+  head () {
+    return {
+      title: this.pageTitle,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
+    }
+  },
   mounted() {
     // Get Mobilite Data
     axios.get('http://51.158.125.115/wp-json/wp/v2/pages/17?_embed')
       .then(response => {
+        this.pageTitle = response.data.title.rendered;
+        
           // Headpage
           this.titremobilite = response.data.acf.titre_mobilite;
           this.imagemobilite = response.data.acf.image_mobilite.url;

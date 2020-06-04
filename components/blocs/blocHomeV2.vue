@@ -49,8 +49,8 @@
           </p>
         </div>
         <p v-if="texte && bloc != 'design' && bloc != 'developpement' && bloc != 'stagealt'">{{texte}}</p>
-        <nuxt-link v-if="lien && bloc == 'altini'" to="/formation" class="action big">En savoir plus</nuxt-link>
-        <nuxt-link v-if="lien && bloc == 'departement'" to="/departement" class="action big">En savoir plus</nuxt-link>
+        <nuxt-link v-if="lien && bloc == 'altini'" to="/formation" class="action big" title="Aller sur la page Formation">En savoir plus</nuxt-link>
+        <nuxt-link v-if="lien && bloc == 'departement'" to="/departement" class="action big" title="Aller sur la page département">En savoir plus</nuxt-link>
         <a v-if="bloc == 'stagealt'" href="https://www.parcoursup.fr/" class="action big" target="_blank" title="Postuler sur ParcourSup (Nouvelle Fenêtre)">Postuler</a>
       </div>
       <div>

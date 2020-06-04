@@ -1,7 +1,16 @@
+// Responsive
+$break-small: 20em; // 320px portable
+$break-tab: 75em; // 1200px tablette
+$break-mid: 105em; // 1680px petit ordi
+
 // Wrap
 .wrap {
     max-width:164rem;
     margin: 0 auto;
+
+    @media screen and (max-width: $break-mid) {
+        max-width:120rem;
+    }
 }
 
 // Access

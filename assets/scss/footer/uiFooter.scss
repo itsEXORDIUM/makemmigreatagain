@@ -136,6 +136,9 @@ footer {
 
     #backToTop {
         position: absolute;
+        display:block;
+        width: auto;
+        height: 3rem;
         top:0;
         transform:translateY(-150%);
         right:1.3rem;
@@ -152,7 +155,7 @@ footer {
             transform:rotate(-90deg);
             color:$yellow;
             font-size: 5em;
-            line-height: 0em;
+            line-height: 1em;
         }
     }
 }

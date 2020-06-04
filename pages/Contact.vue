@@ -1,5 +1,5 @@
 <template>
-  <main id="contact">
+  <main id="contact" role="main">
     <HeadPage name="venezvoir" :quandmeme="true" :titre="titrevenez" :texte="textevenez"/>
     <BlocForums name="bloc_forums" :titre="titreforum" :image="imageforum" :texte="texteforum" :titredeux="titrejpo" :imagedeux="imagejpo" :textedeux="textejpo"/>
     <BlocHome name="espacepro" :titre="titreespacepro" :image='imageespacepro' :texte="texteespacepro" :lien="lienespacepro"/>
@@ -34,6 +34,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: '',
       titrevenez: '',
       textevenez: '',
       titreforum: '',
@@ -62,10 +63,21 @@ export default {
       mail: ''
     }
   },
+  head () {
+    return {
+      title: this.pageTitle,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
+    }
+  },
   mounted() {
     // Get Contact Data
     axios.get('http://51.158.125.115/wp-json/wp/v2/pages/21?_embed')
       .then(response => {
+        this.pageTitle = response.data.title.rendered;
+        
         // Head page
         this.titrevenez = response.data.acf.titre_venez;
         this.textevenez = response.data.acf.texte_venez;

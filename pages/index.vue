@@ -1,5 +1,5 @@
 <template>
-  <main id="accueil">
+  <main id="accueil" role="main">
     <Accueil :headPage="headPage"/>
     <BlocHome :name="namepolyvalents" :titre="titrepolyvalents" :texte="textepolyvalents" :lien="lienpolyvalents" :images="imagespolyvalents"/>
     <BlocHomeV2 :name="namealtini" :titre="titrealtini" :soustitre="soustitrealtini" :texte="textealtini" :lien="lienaltini" :images="imagesaltini"/>
@@ -26,6 +26,7 @@ export default {
     return {
       homeData: [],
       headPage: '',
+      pageTitle: '',
       namepolyvalents : 'polyvalents',
       titrepolyvalents : '',
       textepolyvalents : '',
@@ -58,12 +59,22 @@ export default {
       imagerejoindre: ''
     }
   },
+  head () {
+    return {
+      title: this.pageTitle,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
+    }
+  },
   mounted() {
       // Get Accueil Data
     axios.get('http://51.158.125.115/wp-json/wp/v2/pages/8?_embed')
       .then(response => {
           this.homeData = response.data;
           this.headPage = response.data.content.rendered;
+          this.pageTitle = response.data.title.rendered;
 
           // Etudiants polyvalents
           this.titrepolyvalents = response.data.acf.titre_polyvalents;

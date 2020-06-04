@@ -1,7 +1,7 @@
 <template>
-  <header>
+  <header role="header">
     <div class="wrap">
-      <nuxt-link id="logo" to="/">MMI Montbéliard</nuxt-link>
+      <nuxt-link title="Aller à l'accueil" id="logo" to="/">MMI Montbéliard</nuxt-link>
       <uiNav/>
     </div>
   </header>

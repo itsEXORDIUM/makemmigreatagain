@@ -5,9 +5,9 @@
       <p>{{texte}}</p>
     </div>
     <ul class="buttons_annees">
-      <li><button @click="changeMatiere(1, $event)" class="active">MMI 1</button></li>
-      <li><button @click="changeMatiere(2, $event)">MMI 2</button></li>
-      <li><button @click="changeMatiere(3, $event)">MMI 3</button></li>
+      <li><button role="tab" aria-selected="true" @click="changeMatiere(1, $event)" id="mmi_un" class="active">MMI 1</button></li>
+      <li><button role="tab" aria-selected="false" @click="changeMatiere(2, $event)" id="mmi_deux">MMI 2</button></li>
+      <li><button role="tab" aria-selected="false" @click="changeMatiere(3, $event)" id="mmi_trois">MMI 3</button></li>
     </ul>
     <div class="lists">
       <h3 class="matiere">Design</h3>
@@ -76,13 +76,18 @@ export default {
   },
   methods: {
     changeMatiere: function(n, event) {
-      document.querySelector('button.active').classList.remove('active');
+      var active = document.querySelector('button.active');
+      active.classList.remove('active');
+      active.setAttribute('aria-selected', false);
       if(n === 1) {
         this.active = this.mmi1;
+        document.getElementById('mmi_un').setAttribute('aria-selected', true);
       } else if(n === 2) {
         this.active = this.mmi2;
+        document.getElementById('mmi_deux').setAttribute('aria-selected', true);
       } else if(n === 3) {
         this.active = this.mmi3;
+        document.getElementById('mmi_trois').setAttribute('aria-selected', true);
       }
       event.target.classList.add('active');
     }

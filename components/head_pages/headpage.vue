@@ -15,7 +15,7 @@
       <nuxt-link to="/postuler" class="action big">Postuler <span v-if="quandmeme">quand même !</span></nuxt-link>
     </div>
 
-    <button class="ancre"><span class="show-for-sr">Découvrir MMI Montbéliard</span></button>
+    <button class="ancre" tabindex="0" aria-label="Découvrir MMI Montbéliard" role="button" ><span class="show-for-sr">Découvrir MMI Montbéliard</span></button>
   </div>
 </template>
 

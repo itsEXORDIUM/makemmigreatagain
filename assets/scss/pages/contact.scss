@@ -1,3 +1,21 @@
+body.contact {
+    #menuhandle {
+        background-color: #ffffff;
+
+        &::before {
+            background-color: #ffffff;
+        }
+
+        &::after {
+            background-color: #ffffff;
+        }
+
+        &.toCross {
+            background-color: transparent;
+        }
+    }
+}
+
 #contact {
     .head_page {
         a.action {

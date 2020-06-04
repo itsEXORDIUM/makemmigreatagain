@@ -1,5 +1,5 @@
 <template>
-  <main id="formation">
+  <main id="formation" role="main">
     <Formation :headPage="headPage"/>
     <BlocHome :name="nameformation" :titre="titreformation" :texte="texteformation" :image="imageformation"/>
     <BlocHomeV2 :name="namedesign" :titre="titredesign" :texte="textedesign" :images="imagesdesign"/>
@@ -31,6 +31,7 @@ export default {
     return {
       FormationData: [],
       headPage: '',
+      pageTitle: '',
       nameformation: 'formation',
       titreformation: '',
       texteformation: '',
@@ -71,12 +72,22 @@ export default {
       titreprojets: ''
     }
   },
+  head () {
+    return {
+      title: this.pageTitle,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
+    }
+  },
   mounted() {
       // Get Accueil Data
     axios.get('http://51.158.125.115/wp-json/wp/v2/pages/10?_embed')
       .then(response => {
           this.FormationData = response.data;
           this.headPage = response.data.content.rendered;
+          this.pageTitle = response.data.title.rendered;
 
           // Formation
           this.titreformation = response.data.acf.titre_formation;

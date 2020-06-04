@@ -29,8 +29,8 @@
         </div>
       </div>
 
-      <a class="prev" @click="plusSlides(-1)" title="Voir le témoignage précédent">&#10094;</a>
-      <a class="next" @click="plusSlides(1)" title="Voir le témoignage suivant">&#10095;</a>
+      <button tabindex="0" aria-label="Témoignage Précédent" aria-pressed="false" role="button" class="prev" @click="plusSlides(-1)">&#10094;</button>
+      <button tabindex="0" aria-label="Témoignage Suivant" aria-pressed="false" role="button" class="next" @click="plusSlides(1)" title="Voir le témoignage suivant">&#10095;</button>
     </div>
 
   </div>

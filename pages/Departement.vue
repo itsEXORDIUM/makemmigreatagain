@@ -1,5 +1,5 @@
 <template>
-  <main id="departement">
+  <main id="departement" role="main">
     <div class="greybck">
       <HeadPage name="bienvenue" :titre="titrebienvenue" :image="imagebienvenue" :texte="textebienvenue"/>
     </div>
@@ -23,6 +23,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: '',
       titrebienvenue: '',
       imagebienvenue: '',
       textebienvenue: '',
@@ -37,10 +38,21 @@ export default {
       textefrigo: ''
     }
   },
+  head () {
+    return {
+      title: this.pageTitle,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
+    }
+  },
   mounted() {
     // Get Departement Data
     axios.get('http://51.158.125.115/wp-json/wp/v2/pages/14?_embed')
       .then(response => {
+        this.pageTitle = response.data.title.rendered;
+
         // Headpage
         this.titrebienvenue = response.data.acf.titre_bienvenue;
         this.imagebienvenue = response.data.acf.image_bienvenue;

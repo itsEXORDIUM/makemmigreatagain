@@ -8,7 +8,7 @@
     <div class="right">
       <img src="~/static/imgs/studentComputer.png" alt=""/>
     </div>
-    <button class="ancre"><span class="show-for-sr">Découvrir la formation MMI Montbéliard</span></button>
+    <button class="ancre" tabindex="0" aria-label="Découvrir la formation" role="button" ><span class="show-for-sr">Découvrir la formation MMI Montbéliard</span></button>
   </div>
 </template>
 
