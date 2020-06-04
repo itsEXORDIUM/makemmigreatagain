@@ -1,5 +1,5 @@
 <template>
-  <div :class="`bloc_equipe wrap ${name}`">
+  <div class="bloc_equipe wrap">
     <div class="bloc_title">
       <h2 class="bloc_titre"><span class="show-for-sr">{{titre}}</span>
           <Equipe/>

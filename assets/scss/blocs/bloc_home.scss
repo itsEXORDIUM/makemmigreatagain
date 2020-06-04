@@ -953,9 +953,11 @@
     &.frigo {
         display:flex;
         flex-wrap: wrap;
-        margin-top:30rem;
+        padding-top:30rem;
         position: relative;
         padding-bottom:8rem;
+        background: url('../../static/imgs/taches/tache_foncee_2.png') no-repeat 10% top;
+        background-size:46%;
 
         > div:first-of-type {
             width:50%;
@@ -1141,6 +1143,20 @@
         }
 
         .bloc_titre {
+            position:relative;
+
+            &::before {
+                content:'';
+                background: url('../../static/imgs/taches/truk2.png') no-repeat center center;
+                background-size:140%;
+                position:absolute;
+                display: block;
+                width:100%;
+                height:150%;
+                top:-50%;
+                right:61%;
+                z-index:-1;
+            }
             
             svg {
                 width: 180%;
@@ -1197,6 +1213,8 @@
 
         .bloc_titre {
             width:60%;
+            background: url('../../static/imgs/taches/tache_blue_again.png') no-repeat center center;
+            background-size:contain;
 
             svg {
                 margin-left: -23rem;

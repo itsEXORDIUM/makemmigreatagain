@@ -10,6 +10,7 @@
     </h1>
     <div class="content">
       <img :src="image" alt=""/>
+      <img v-if="bloc == 'venezvoir'" src="~/static/imgs/map.PNG" alt=""/>
       <p>{{texte}}</p>
       <nuxt-link to="/postuler" class="action big">Postuler <span v-if="quandmeme">quand même !</span></nuxt-link>
     </div>
