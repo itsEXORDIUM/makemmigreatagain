@@ -6,13 +6,15 @@
         <DroitsAuteurs />
       </h2>
     </div>
-    <div class="bloc">
-      <h3>{{titreloi}}</h3>
-      <p>{{texteloi}}</p>
-    </div>
-    <div class="bloc">
-      <h3>{{titredroitsauteurs}}</h3>
-      <p>{{textedroitsauteurs}}</p>
+    <div class="textedroitauteur">
+      <div class="blocgauche">
+        <h3>{{titreloi}}</h3>
+        <p>{{texteloi}}</p>
+      </div>
+      <div class="blocdroit">
+        <h3>{{titredroitsauteurs}}</h3>
+        <p>{{textedroitsauteurs}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -23,12 +25,12 @@ import DroitsAuteurs from "~/components/titres/droitsauteurs";
 
 export default {
   props: {
-    name: '',
-    titre: '',
-    titreloi: '',
-    texteloi: '',
-    titredroitsauteurs: '',
-    textedroitsauteurs: ''
+    name: "",
+    titre: "",
+    titreloi: "",
+    texteloi: "",
+    titredroitsauteurs: "",
+    textedroitsauteurs: ""
   },
   components: {
     DroitsAuteurs

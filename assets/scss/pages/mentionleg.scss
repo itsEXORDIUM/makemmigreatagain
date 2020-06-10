@@ -32,36 +32,91 @@ body.mentionsleg {
     }
 
     .ancre {
-        position:absolute;
-        bottom:0;
-        left:50%;
-        transform:translateX(-50%);
-        font-family: 'muli_semibold', Arial, Helvetica, sans-serif;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "muli_semibold", Arial, Helvetica, sans-serif;
         font-size: 1.6em;
         line-height: 1.2em;
-        color:$blue;
+        color: $blue;
         text-align: center;
 
         &::after {
-            background:url('../../static/svgs/scrollDark.svg') no-repeat center center;
+            background: url("../../static/svgs/scrollDark.svg") no-repeat center center;
             background-size: cover;
             margin: 1rem auto;
         }
     }
-
 }
 
 #mentionsleg > .blocdroitsauteurs h3 {
-    font-family: 'morganite_bold';
+    font-family: "morganite_bold";
     font-size: 10em;
 }
 
 #mentionsleg > .blocdroitsauteurs {
+    h2 svg {
+        margin-top: -30rem;
+        margin-left: -30rem;
+        width: 120rem;
+        margin-bottom: -40rem;
+    }
     h3 {
-        font-family: 'morganite_bold';
-    font-size: 10em;
+        font-family: "morganite_bold";
+        font-size: 10em;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
     }
     p {
         font-size: 1.8em;
+    }
+    .textedroitauteur {
+        display: flex;
+    }
+    .blocgauche {
+        width: 35%;
+    }
+    .blocdroit {
+        width: 50%;
+        padding-left: 15rem;
+    }
+}
+
+#mentionsleg > .blocconception {
+    h2 svg {
+        margin-top: -5rem;
+        margin-left: -10rem;
+        width: 120rem;
+        margin-bottom: -40rem;
+    }
+}
+
+.blocconception > .membres {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15rem;
+
+    > .membre {
+        width: 50%;
+        padding: 5rem 14rem;
+
+        > img {
+            object-fit: cover;
+            width: 54rem;
+            height: 54em;
+        }
+
+        > h3 {
+            font-family: "morganite_bold";
+            font-size: 15em;
+            text-transform: uppercase;
+            margin: 1rem 0;
+        }
+
+        > p {
+            font-size: 2.5em;
+            margin: 0;
+        }
     }
 }
