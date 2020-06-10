@@ -6,11 +6,10 @@
         <Mentionsleg />
       </h1>
       <button class="ancre">
-        <span class="show-for-sr">Découvrir MMI Montbéliard</span>
+        <span class="show-for-sr">Découvrir les mentions légales</span>
       </button>
     </div>
-    <BlocDroitsAuteurs :name="namedroitsauteurs" :titre="titredroitsauteurs" :titreloi="titreloi"  :texteloi="texteloi" :titredroitsauteurs="titredroitsauteurs" :textedroitsauteurs="textedroitsauteurs"
-    />
+    <BlocDroitsAuteurs :name="namedroitsauteurs" :titre="titredroitsauteurs" :titreloi="titreloi"  :texteloi="texteloi" :titredroitsauteurs="titredroitsauteurs" :textedroitsauteurs="textedroitsauteurs" />
     <BlocConception :name="nameconception" :titre="titreconception" />
   </main>
 </template>
@@ -37,7 +36,6 @@ export default {
       textedroitsauteurs: '',
       nameconception: 'blocconception',
       titreconception: '',
-      imagecaro: '',
     };
   },
   head () {

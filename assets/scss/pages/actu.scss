@@ -1,4 +1,4 @@
-body.mentionsleg {
+body.actu {
     background-color: $brown;
     color: $darkgrey;
 
@@ -19,7 +19,6 @@ body.mentionsleg {
     }
 
     footer {
-
         a {
             color: $darkgrey;
         }
@@ -32,7 +31,8 @@ body.mentionsleg {
             }
         }
 
-        > #logoFooter a::before, #logoFooter a::after {
+        > #logoFooter a::before,
+        #logoFooter a::after {
             background-color: $darkgrey;
         }
 
@@ -70,15 +70,19 @@ body.mentionsleg {
     }
 }
 
-#mentionsleg > .head_page {
+#actu > .head_page {
     > h1 {
         width: 100%;
         display: flex;
         justify-content: center;
 
         svg {
-            width: 120rem;
-            margin-top: -160px;
+            width: 100rem;
+            margin-top: -82px;
+        }
+
+        > span {
+            margin-left: -10rem;
         }
     }
 
@@ -97,82 +101,6 @@ body.mentionsleg {
             background: url("../../static/svgs/scrollDark.svg") no-repeat center center;
             background-size: cover;
             margin: 1rem auto;
-        }
-    }
-}
-
-#mentionsleg > .blocdroitsauteurs h3 {
-    font-family: "morganite_bold";
-    font-size: 10em;
-}
-
-#mentionsleg > .blocdroitsauteurs {
-    h2 svg {
-        margin-top: -30rem;
-        margin-left: -30rem;
-        width: 120rem;
-        margin-bottom: -40rem;
-    }
-    h3 {
-        font-family: "morganite_bold";
-        font-size: 10em;
-        margin-bottom: 3rem;
-        text-transform: uppercase;
-    }
-    p {
-        font-size: 1.8em;
-    }
-    .textedroitauteur {
-        display: flex;
-    }
-    .blocgauche {
-        width: 35%;
-    }
-    .blocdroit {
-        width: 50%;
-        padding-left: 15rem;
-    }
-}
-
-#mentionsleg > .blocconception {
-    h2 svg {
-        margin-top: -5rem;
-        margin-left: -10rem;
-        width: 120rem;
-        margin-bottom: -40rem;
-    }
-}
-
-#__layout > div > footer {
-    margin-top: 15rem;
-}
-
-.blocconception > .membres {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 15rem;
-
-    > .membre {
-        width: 50%;
-        padding: 0 3rem;
-        margin: 10rem 0;
-
-        > img {
-            object-fit: cover;
-            width: 54rem;
-            height: 54rem;
-        }
-
-        > h3 {
-            font-family: "morganite_bold";
-            font-size: 15em;
-            text-transform: uppercase;
-            margin: 1rem 0;
-        }
-
-        > p {
-            font-size: 2.5em;
-            margin: 0;
         }
     }
 }
