@@ -99,11 +99,13 @@ body.mentionsleg {
 
     > .membre {
         width: 50%;
+        padding: 0 3rem;
+        margin: 10rem 0;
 
         > img {
             object-fit: cover;
             width: 54rem;
-            height: 54em;
+            height: 54rem;
         }
 
         > h3 {
