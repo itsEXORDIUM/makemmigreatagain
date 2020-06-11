@@ -1,5 +1,5 @@
 <template>
-  <header role="header">
+  <header role="banner">
     <div class="wrap">
       <nuxt-link title="Aller à l'accueil" id="logo" to="/">MMI Montbéliard</nuxt-link>
       <uiNav/>

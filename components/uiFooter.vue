@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer role="contentinfo">
       <div id="logoFooter">
         <nuxt-link to="/">MMI Montbéliard</nuxt-link>
       </div>
