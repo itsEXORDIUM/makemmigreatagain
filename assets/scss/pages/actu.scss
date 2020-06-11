@@ -70,37 +70,39 @@ body.actu {
     }
 }
 
-#actu > .head_page {
-    > h1 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+#actu {
+    > .head_page {
+        > h1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
 
-        svg {
-            width: 100rem;
-            margin-top: -82px;
+            svg {
+                width: 100rem;
+                margin-top: -82px;
+            }
+
+            > span {
+                margin-left: -10rem;
+            }
         }
 
-        > span {
-            margin-left: -10rem;
-        }
-    }
+        .ancre {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: "muli_semibold", Arial, Helvetica, sans-serif;
+            font-size: 1.6em;
+            line-height: 1.2em;
+            color: $blue;
+            text-align: center;
 
-    .ancre {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: "muli_semibold", Arial, Helvetica, sans-serif;
-        font-size: 1.6em;
-        line-height: 1.2em;
-        color: $blue;
-        text-align: center;
-
-        &::after {
-            background: url("../../static/svgs/scrollDark.svg") no-repeat center center;
-            background-size: cover;
-            margin: 1rem auto;
+            &::after {
+                background: url("../../static/svgs/scrollDark.svg") no-repeat center center;
+                background-size: cover;
+                margin: 1rem auto;
+            }
         }
     }
 }

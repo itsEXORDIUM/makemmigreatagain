@@ -1,0 +1,28 @@
+body.postuler {
+    background-color: $green;
+    color: $blue;
+
+    #menuhandle {
+        background-color: #ffffff;
+
+        &::before {
+            background-color: #ffffff;
+        }
+
+        &::after {
+            background-color: #ffffff;
+        }
+
+        &.toCross {
+            background-color: transparent;
+        }
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+#postuler {
+    height: 100vh;
+}
