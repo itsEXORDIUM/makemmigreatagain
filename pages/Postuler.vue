@@ -1,8 +1,13 @@
 <template>
   <main id="postuler" role="main">
-    <h1>{{titrePostuler}}</h1>
-    <a :href="urlPostler" class="action big dark">Voir le profil des étudiants</a>
-    <iframe width="956" height="538" :src="urlVideo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="droite">
+      <h1>{{titrePostuler}}</h1>
+      <a :href="urlPostuler" class="action big dark" target="_blank">S'inscrire via parcoursup</a>
+    </div>
+    <iframe
+      width="956" height="538" :src="urlVideo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
   </main>
 </template>
 
@@ -15,8 +20,8 @@ export default {
     return {
       pageTitle: "",
       titrePostuler: "",
-      urlPostler: "",
-      urlVideo: "",
+      urlPostuler: "",
+      urlVideo: ""
     };
   },
   head() {
@@ -41,7 +46,7 @@ export default {
 
         //headPage
         this.titrePostuler = response.data.acf.titre_postuler;
-        this.urlPostler = response.data.acf.lien_parcoursup;
+        this.urlPostuler = response.data.acf.lien_parcoursup;
         this.urlVideo = response.data.acf.video_postuler;
       });
   }
