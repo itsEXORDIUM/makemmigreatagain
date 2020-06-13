@@ -52,7 +52,7 @@ export default {
   },
   mounted() {
       // Get Cours
-    axios.get('http://51.158.125.115/wp-json/wp/v2/cours?_embed')
+    axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/cours?_embed')
       .then(response => {
         this.cours = response.data;
 

@@ -49,7 +49,7 @@ export default {
   },
   mounted() {
     // Get Departement Data
-    axios.get('http://51.158.125.115/wp-json/wp/v2/pages/14?_embed')
+    axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/pages/14?_embed')
       .then(response => {
         this.pageTitle = response.data.title.rendered;
 

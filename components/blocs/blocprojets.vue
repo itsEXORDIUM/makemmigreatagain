@@ -37,7 +37,7 @@ export default {
   },
   mounted() {
      // Get Temoignages
-    axios.get('http://51.158.125.115/wp-json/wp/v2/projets')
+    axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/projets')
       .then(response => {
           this.projets = response.data;
       })

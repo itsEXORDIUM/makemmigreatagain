@@ -48,7 +48,7 @@ export default {
   },
   mounted() {
     // Get Equipe Data
-    axios.get('http://51.158.125.115/wp-json/wp/v2/equipe?_embed')
+    axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/equipe?_embed')
       .then(response => {
         this.membres = response.data;
       })

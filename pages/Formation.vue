@@ -83,7 +83,7 @@ export default {
   },
   mounted() {
       // Get Accueil Data
-    axios.get('http://51.158.125.115/wp-json/wp/v2/pages/10?_embed')
+    axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/pages/10?_embed')
       .then(response => {
           this.FormationData = response.data;
           this.headPage = response.data.content.rendered;

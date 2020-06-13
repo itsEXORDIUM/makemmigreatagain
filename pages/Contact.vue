@@ -74,7 +74,7 @@ export default {
   },
   mounted() {
     // Get Contact Data
-    axios.get('http://51.158.125.115/wp-json/wp/v2/pages/21?_embed')
+    axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/pages/21?_embed')
       .then(response => {
         this.pageTitle = response.data.title.rendered;
         

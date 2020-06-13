@@ -55,7 +55,7 @@ export default {
   },
   mounted() {
      // Get Temoignages
-    axios.get('http://51.158.125.115/wp-json/wp/v2/temoignage_ancien?_embed')
+    axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/temoignage_ancien?_embed')
       .then(response => {
           this.temoignages = response.data;
           this.showSlides();
