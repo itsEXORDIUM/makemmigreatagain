@@ -1,0 +1,51 @@
+body.postuler {
+    background-color: $green;
+    color: $blue;
+
+    #menuhandle {
+        background-color: #ffffff;
+
+        &::before {
+            background-color: #ffffff;
+        }
+
+        &::after {
+            background-color: #ffffff;
+        }
+
+        &.toCross {
+            background-color: transparent;
+        }
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+#postuler {
+    height: 98vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    > div.droite {
+        width: 33%;
+        height: 100%;
+        position: relative;
+        height: max-content;
+        padding-left: 14.5rem;
+
+        > h1 {
+            font-family: "morganite_bold";
+            font-size: 8em;
+            text-transform: uppercase;
+        }
+    }
+
+    > iframe {
+        width: 67%;
+        padding-left: 24em;
+        padding-right: 27.5em;
+    }
+}
