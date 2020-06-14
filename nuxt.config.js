@@ -54,7 +54,7 @@ export default {
    extend (config, { isDev, isClient }) {
     if (!isDev) {
       // relative links, please.
-      config.output.publicPath = 'https://itsexordium.github.io/mmi/_nuxt/'
+      config.output.publicPath = './_nuxt/'
     }
     return config;
   }
