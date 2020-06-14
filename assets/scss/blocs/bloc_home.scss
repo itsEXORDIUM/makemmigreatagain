@@ -74,7 +74,7 @@
             left:-5rem;
             width:50%;
             height:35%;
-            background: url('../../static/imgs/taches/truk2.png') no-repeat center center;
+            background: url('../imgs/taches/truk2.png') no-repeat center center;
             background-size:contain;
             z-index:-1;
         }
@@ -138,7 +138,7 @@
 
                 > div:first-of-type {
                     position:relative;
-                    background: url('../../static/imgs/taches/truk.png') no-repeat center center;
+                    background: url('../imgs/taches/truk.png') no-repeat center center;
                     background-size:contain;
                 }
             }
@@ -288,7 +288,7 @@
             left:-96rem;
             width:150%;
             height:150%;
-            background: url('../../static/imgs/taches/tache-foncee_8.png') no-repeat center center;
+            background: url('../imgs/taches/tache-foncee_8.png') no-repeat center center;
             background-size:contain;
             z-index:-1;
 
@@ -340,7 +340,7 @@
             right:-4rem;
             width:30%;
             height:50%;
-            background: url('../../static/imgs/taches/tache_foncee_6.png') no-repeat center center;
+            background: url('../imgs/taches/tache_foncee_6.png') no-repeat center center;
             background-size:contain;
             z-index:-1;
         }
@@ -380,7 +380,7 @@
             left:-13rem;
             width:75%;
             height:75%;
-            background: url('../../static/imgs/taches/truk2.png') no-repeat center center;
+            background: url('../imgs/taches/truk2.png') no-repeat center center;
             background-size:contain;
             z-index:-1;
         }
@@ -561,7 +561,7 @@
                 margin-top: -25rem;
                 z-index:0;
                 position:relative;
-                background: url('../../static/imgs/taches/tache_jaune.png') no-repeat right 20rem;
+                background: url('../imgs/taches/tache_jaune.png') no-repeat right 20rem;
                 background-size:80%;
 
                 > div:last-of-type {
@@ -624,7 +624,7 @@
                 flex-direction: column;
                 z-index:0;
                 position:relative;
-                background: url('../../static/imgs/taches/tache_foncee_6.png') no-repeat top center;
+                background: url('../imgs/taches/tache_foncee_6.png') no-repeat top center;
                 background-size:53%;
 
                 > div:last-of-type {
@@ -847,7 +847,7 @@
                 margin-bottom:-25rem;
                 z-index:1;
                 position:relative;
-                background: url('../../static/imgs/taches/tache_foncee_3.png') no-repeat top left;
+                background: url('../imgs/taches/tache_foncee_3.png') no-repeat top left;
                 background-size:50%;
 
                 > div:last-of-type {
@@ -1008,7 +1008,7 @@
         padding-top:30rem;
         position: relative;
         padding-bottom:8rem;
-        background: url('../../static/imgs/taches/tache_foncee_2.png') no-repeat 10% top;
+        background: url('../imgs/taches/tache_foncee_2.png') no-repeat 10% top;
         background-size:46%;
 
         > div:first-of-type {
@@ -1199,7 +1199,7 @@
 
             &::before {
                 content:'';
-                background: url('../../static/imgs/taches/truk2.png') no-repeat center center;
+                background: url('../imgs/taches/truk2.png') no-repeat center center;
                 background-size:140%;
                 position:absolute;
                 display: block;
@@ -1265,7 +1265,7 @@
 
         .bloc_titre {
             width:60%;
-            background: url('../../static/imgs/taches/tache_blue_again.png') no-repeat center center;
+            background: url('../imgs/taches/tache_blue_again.png') no-repeat center center;
             background-size:contain;
 
             svg {
