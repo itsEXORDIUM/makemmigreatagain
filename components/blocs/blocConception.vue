@@ -8,7 +8,7 @@
     </div>
     <div class="membres">
       <div class="membre" v-for="(mb, index) in membres" :key="index">
-        <img :src="mb.image" alt />
+        <img :src="mb.image" />
         <h3>{{mb.nom}}</h3>
         <p>{{mb.role}}</p>
       </div>

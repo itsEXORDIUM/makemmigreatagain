@@ -44,27 +44,33 @@ body.mentionsleg {
             &.reseaux {
                 &.linkedin {
                     background: url("../../static/logos/linkedblack.png") no-repeat center center;
+                    background-size: contain;
                 }
 
                 &.facebook {
                     background: url("../../static/logos/fbblack.png") no-repeat center center;
+                    background-size: contain;
                 }
 
                 &.insta {
                     background: url("../../static/logos/instblack.png") no-repeat center center;
+                    background-size: contain;
                 }
 
                 &.twitter {
                     background: url("../../static/logos/twblack.png") no-repeat center center;
+                    background-size: contain;
                 }
             }
 
             &.iut {
                 background: url("../../static/logos/iutblack.png") no-repeat center center;
+                background-size: contain;
             }
 
             &.universitefc {
                 background: url("../../static/logos/univblack.png") no-repeat center center;
+                background-size: contain;
             }
         }
     }
