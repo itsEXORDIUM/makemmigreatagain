@@ -57,10 +57,7 @@
         <img :src="images.image_2" alt=""/>
       </div>
     </div>
-    <video v-if="bloc == 'barcelone'" width="1088" height="612" controls>
-      <source :src="video.url" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
+    <video v-if="bloc == 'barcelone'" width="1088" height="612" :src="video.url" controls></video>
   </div>
 </template>
 
