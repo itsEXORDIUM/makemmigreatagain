@@ -38,9 +38,12 @@ export default {
     };
   },
   mounted() {
+    document.querySelector('body').className = '';
+    document.querySelector('body').classList.add('postuler');
+
     // Get Mentionslégales Data
     axios
-      .get("http://51.158.125.115/wp-json/wp/v2/pages/511?_embed")
+      .get("https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/pages/511?_embed")
       .then(response => {
         this.pageTitle = response.data.title.rendered;
 

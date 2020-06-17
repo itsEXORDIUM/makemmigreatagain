@@ -69,6 +69,9 @@ export default {
     }
   },
   mounted() {
+    document.querySelector('body').className = '';
+    document.querySelector('body').classList.add('accueil');
+
       // Get Accueil Data
     axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/pages/8?_embed')
       .then(response => {

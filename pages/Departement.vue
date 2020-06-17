@@ -48,6 +48,9 @@ export default {
     }
   },
   mounted() {
+    document.querySelector('body').className = '';
+    document.querySelector('body').classList.add('departement');
+
     // Get Departement Data
     axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/pages/14?_embed')
       .then(response => {

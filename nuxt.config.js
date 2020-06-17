@@ -15,9 +15,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  router: {
-    base: '/makemmigreatagain/'
-  },
   /*
   ** Customize the progress-bar color
   */

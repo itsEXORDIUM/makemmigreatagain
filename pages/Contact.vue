@@ -73,6 +73,9 @@ export default {
     }
   },
   mounted() {
+    document.querySelector('body').className = '';
+    document.querySelector('body').classList.add('contact');
+
     // Get Contact Data
     axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/pages/21?_embed')
       .then(response => {

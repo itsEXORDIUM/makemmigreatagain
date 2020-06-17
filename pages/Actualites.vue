@@ -39,6 +39,9 @@ export default {
     }
   },
   mounted() {
+    document.querySelector('body').className = '';
+    document.querySelector('body').classList.add('actu');
+
     // Get Mentionslégales Data
     axios
       .get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/pages/19?_embed')

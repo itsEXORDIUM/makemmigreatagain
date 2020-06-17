@@ -15,6 +15,10 @@ export default {
         { hid: 'description', name: 'description', content: 'My custom description' }
       ]
     }
+  },
+  mounted() {
+    document.querySelector('body').className = '';
+    document.querySelector('body').classList.add('404');
   }
 }
 </script>

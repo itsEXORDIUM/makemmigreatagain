@@ -56,6 +56,9 @@ export default {
     }
   },
   mounted() {
+    document.querySelector('body').className = '';
+    document.querySelector('body').classList.add('mobilite');
+
     // Get Mobilite Data
     axios.get('https://palayewordpress.planethoster.world/mmi/wp-json/wp/v2/pages/17?_embed')
       .then(response => {
