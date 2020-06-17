@@ -1,5 +1,5 @@
 body.actu {
-    background-color: $brown;
+    background-color: $yellow;
     color: $darkgrey;
 
     #menuhandle {
@@ -44,27 +44,33 @@ body.actu {
             &.reseaux {
                 &.linkedin {
                     background: url("../../static/logos/linkedblack.png") no-repeat center center;
+                    background-size: contain;
                 }
 
                 &.facebook {
                     background: url("../../static/logos/fbblack.png") no-repeat center center;
+                    background-size: contain;
                 }
 
                 &.insta {
                     background: url("../../static/logos/instblack.png") no-repeat center center;
+                    background-size: contain;
                 }
 
                 &.twitter {
                     background: url("../../static/logos/twblack.png") no-repeat center center;
+                    background-size: contain;
                 }
             }
 
             &.iut {
                 background: url("../../static/logos/iutblack.png") no-repeat center center;
+                background-size: contain;
             }
 
             &.universitefc {
                 background: url("../../static/logos/univblack.png") no-repeat center center;
+                background-size: contain;
             }
         }
     }
@@ -102,6 +108,139 @@ body.actu {
                 background: url("../../static/svgs/scrollDark.svg") no-repeat center center;
                 background-size: cover;
                 margin: 1rem auto;
+            }
+        }
+    }
+
+    .actualite {
+        .buttons_reseaux {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            font-family: "muli_bold";
+            font-size: 3em;
+
+            > li {
+                > button {
+                    height: 5.4rem;
+                    width: 10rem;
+                    border: solid $green 3px;
+                    border-radius: 27px;
+                    color: $green;
+                    margin: 1rem;
+                }
+
+                > #twitter {
+                    text-indent: -9999em;
+                    background: url("../../static/logos/twgreen.png") no-repeat center center;
+                    background-size: contain;
+
+                    &.active {
+                        background: url("../../static/logos/twyellow.png") no-repeat center center;
+                        background-size: contain;
+                        background-color: $green;
+                    }
+                }
+
+                #facebook {
+                    text-indent: -9999em;
+                    background: url("../../static/logos/fbgreen.png") no-repeat center center;
+                    background-size: contain;
+
+                    &.active {
+                        background: url("../../static/logos/fbyellow.png") no-repeat center center;
+                        background-size: contain;
+                        background-color: $green;
+                    }
+                }
+
+                #instagram {
+                    text-indent: -9999em;
+                    background: url("../../static/logos/instgreen.png") no-repeat center center;
+                    background-size: contain;
+
+                    &.active {
+                        background: url("../../static/logos/instyellow.png") no-repeat center center;
+                        background-size: contain;
+                        background-color: $green;
+                    }
+                }
+
+                #tous.active {
+                    color: $yellow;
+                    background-color: $green;
+                }
+            }
+        }
+
+        > .lists {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .post {
+                position: relative;
+                width: 32%;
+                height: 330px;
+                margin: 4em 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 6.4rem;
+                    height: 6.4rem;
+                    left: 50%;
+                    top: 1rem;
+                    transform: translate(-50%, 0);
+                }
+
+                .filtre,
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    object-fit: cover;
+                }
+
+                .filtre {
+                    background-color: $darkgrey;
+                    opacity: 70%;
+                }
+
+                > p {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    padding: 0 7rem;
+                    font-size: 2em;
+                }
+            }
+
+            .facebook {
+                color: $blue;
+
+                &::after {
+                    background-image: url("../../static/logos/fbactu.png");
+                    background-size: 100%;
+                }
+            }
+
+            .instagram::after {
+                background-image: url("../../static/logos/instactu.png");
+                background-size: 100%;
+            }
+
+            .twitter {
+                background-color: $brown;
+                color: $darkgrey;
+
+                &::after {
+                    background-image: url("../../static/logos/twactu.png");
+                    background-size: 100%;
+                }
             }
         }
     }
