@@ -3,6 +3,10 @@
     background-size:140%;
     position:relative;
 
+    @media screen and (max-width: $break-mid) {
+        background: url(/_nuxt/static/imgs/taches/tache_foncee_7.png) no-repeat 20% -32%;
+    }
+
     &::before {
         content:'';
         display: block;
@@ -59,6 +63,10 @@
         .content {
             font-family: 'morganite_bold', 'muli bold', arial, helvetica, sans-serif;
             width:20%;
+
+            @media screen and (max-width: $break-mid) {
+                width: 30%;
+            }
 
             .name {
                 font-size: 15em;

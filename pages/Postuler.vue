@@ -1,6 +1,6 @@
 <template>
   <main id="postuler" role="main">
-    <div class="droite">
+    <div class="gauche">
       <h1>{{titrePostuler}}</h1>
       <a :href="urlPostuler" class="action big dark" target="_blank">S'inscrire via parcoursup</a>
     </div>

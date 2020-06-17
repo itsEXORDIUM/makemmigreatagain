@@ -102,6 +102,10 @@
                 &:hover, &.nuxt-link-exact-active {
                     background-size: 220% 120%;
                 }
+
+                @media screen and (max-width: $break-mid) {
+                    line-height: 1em;
+                }
             }
         }
 

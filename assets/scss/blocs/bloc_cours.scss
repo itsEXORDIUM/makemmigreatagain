@@ -4,12 +4,16 @@
     flex-direction: column;
 
     .bloc_title {
-        width:50%;
+        width: 50%;
         margin-left: auto;
         padding-left: 14rem;
 
+        @media screen and (max-width: $break-mid) {
+            width: 65%;
+        }
+
         .bloc_titre {
-            font-family: 'morganite_bold', arial, helvetica, sans-serif;
+            font-family: "morganite_bold", arial, helvetica, sans-serif;
             text-transform: uppercase;
             font-size: 30em;
             line-height: 1em;
@@ -28,7 +32,7 @@
     }
 
     .buttons_annees {
-        width:50%;
+        width: 50%;
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
@@ -37,20 +41,26 @@
 
         li {
             button {
-                font-family: 'morganite_bold', arial, helvetica, sans-serif;
+                font-family: "morganite_bold", arial, helvetica, sans-serif;
                 font-size: 9em;
                 line-height: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width:22.5rem;
-                height:9.3rem;
-                border-radius:47%;
-                border:1px solid $green;
-                color:$blue;
+                width: 22.5rem;
+                height: 9.3rem;
+                border-radius: 5rem;
+                border: 1px solid $green;
+                color: $blue;
                 text-transform: uppercase;
                 background: $darkgrey;
-                transition:all .3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+
+                @media screen and (max-width: $break-mid) {
+                    width: 17rem;
+                    height: 7rem;
+                    font-size: 7em;
+                }
 
                 &.active {
                     background: $green;
@@ -64,7 +74,7 @@
     }
 
     .lists {
-        width:50%;
+        width: 50%;
         margin: 0 auto;
 
         .matiere {

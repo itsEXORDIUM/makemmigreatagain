@@ -29,7 +29,7 @@ body.postuler {
     flex-wrap: wrap;
     align-items: center;
 
-    > div.droite {
+    > div.gauche {
         width: 33%;
         height: 100%;
         position: relative;
@@ -47,5 +47,12 @@ body.postuler {
         width: 67%;
         padding-left: 24em;
         padding-right: 27.5em;
+
+        @media screen and (max-width: $break-mid) {
+            width: 67%;
+            padding-left: 12rem;
+            padding-right: 22.5rem;
+            height: 38rem;
+        }
     }
 }

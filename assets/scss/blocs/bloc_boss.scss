@@ -1,9 +1,8 @@
 .blocboss {
-    background: url('../../static/imgs/taches/tache_again.png') no-repeat 120% 95%;
-    background-size:65%;
+    background: url("../../static/imgs/taches/tache_again.png") no-repeat 120% 95%;
+    background-size: 65%;
 
     .bloc_title {
-
         #pretssvg {
             width: 75%;
             margin-top: -20rem;
@@ -15,6 +14,10 @@
             padding-right: 5rem;
             float: right;
             margin-bottom: -15rem;
+
+            @media screen and (max-width: $break-mid) {
+                margin-top: -53rem;
+            }
         }
     }
 
@@ -27,13 +30,13 @@
 
         p {
             font-size: 1.8em;
-            width:45%;
+            width: 45%;
             text-align: center;
             margin-top: 8rem;
         }
 
         p.en_avant {
-            font-family: 'morganite_bold', arial, helvetica, sans-serif;
+            font-family: "morganite_bold", arial, helvetica, sans-serif;
             font-size: 10em;
             text-transform: uppercase;
             margin: 0;

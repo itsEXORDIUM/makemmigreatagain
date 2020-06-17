@@ -19,7 +19,6 @@ body.mentionsleg {
     }
 
     footer {
-
         a {
             color: $darkgrey;
         }
@@ -32,7 +31,8 @@ body.mentionsleg {
             }
         }
 
-        > #logoFooter a::before, #logoFooter a::after {
+        > #logoFooter a::before,
+        #logoFooter a::after {
             background-color: $darkgrey;
         }
 
@@ -77,6 +77,21 @@ body.mentionsleg {
 }
 
 #mentionsleg > .head_page {
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 8rem;
+        left: 63rem;
+        width: 57%;
+        height: 82%;
+        background: url("../../static/imgs/taches/tache_clair.png") no-repeat center center;
+        background-size: contain;
+        z-index: -1;
+    }
+
     > h1 {
         width: 100%;
         display: flex;
@@ -141,6 +156,21 @@ body.mentionsleg {
 }
 
 #mentionsleg > .blocconception {
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 68%;
+        left: 39rem;
+        top: 28rem;
+        height: 28%;
+        background: url(/_nuxt/static/imgs/taches/tache_bleue_3.png) no-repeat center center;
+        background-size: contain;
+        z-index: -1;
+    }
+
     h2 svg {
         margin-top: -5rem;
         margin-left: -10rem;
